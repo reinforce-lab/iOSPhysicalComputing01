@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8032DB715785703007A8061 /* onpuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8032DB615785703007A8061 /* onpuView.m */; };
+		F81D9880156FB942005058CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81D987F156FB942005058CA /* UIKit.framework */; };
+		F81D9882156FB942005058CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81D9881156FB942005058CA /* Foundation.framework */; };
+		F81D9884156FB942005058CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81D9883156FB942005058CA /* CoreGraphics.framework */; };
+		F81D988A156FB942005058CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F81D9888156FB942005058CA /* InfoPlist.strings */; };
+		F81D988C156FB942005058CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F81D988B156FB942005058CA /* main.m */; };
+		F81D9890156FB942005058CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F81D988F156FB942005058CA /* AppDelegate.m */; };
+		F81D9893156FB942005058CA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81D9891156FB942005058CA /* MainStoryboard.storyboard */; };
+		F86C81FF15710CA600A75BE0 /* touchPointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F86C81FD15710CA600A75BE0 /* touchPointsViewController.m */; };
+		F87D71D11574F61900AF3AB1 /* measureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D71CF1574F61900AF3AB1 /* measureViewController.m */; };
+		F87D71D61574F62B00AF3AB1 /* onpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D71D41574F62B00AF3AB1 /* onpuViewController.m */; };
+		F87D71FE157502C500AF3AB1 /* touchesView.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D71FD157502C500AF3AB1 /* touchesView.m */; };
+		F87D7214157618D600AF3AB1 /* measureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D7213157618D600AF3AB1 /* measureView.m */; };
+		F87D722A1576FA4A00AF3AB1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87D72291576FA4A00AF3AB1 /* AudioToolbox.framework */; };
+		F87D722C1576FA4F00AF3AB1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87D722B1576FA4F00AF3AB1 /* AVFoundation.framework */; };
+		F8C598E9163E530F00547E43 /* a.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E1163E530F00547E43 /* a.aif */; };
+		F8C598EA163E530F00547E43 /* b.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E2163E530F00547E43 /* b.aif */; };
+		F8C598EB163E530F00547E43 /* c.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E3163E530F00547E43 /* c.aif */; };
+		F8C598EC163E530F00547E43 /* d.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E4163E530F00547E43 /* d.aif */; };
+		F8C598ED163E530F00547E43 /* e.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E5163E530F00547E43 /* e.aif */; };
+		F8C598EE163E530F00547E43 /* f.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E6163E530F00547E43 /* f.aif */; };
+		F8C598EF163E530F00547E43 /* g.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E7163E530F00547E43 /* g.aif */; };
+		F8C598F0163E530F00547E43 /* input.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E8163E530F00547E43 /* input.aif */; };
+		F8C59903163E532300547E43 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598F1163E532300547E43 /* default.png */; };
+		F8C59904163E532300547E43 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598F2163E532300547E43 /* default@2x.png */; };
+		F8C59905163E532300547E43 /* finger.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598F3163E532300547E43 /* finger.png */; };
+		F8C59906163E532300547E43 /* finger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598F4163E532300547E43 /* finger@2x.png */; };
+		F8C59907163E532300547E43 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598F5163E532300547E43 /* icon.png */; };
+		F8C59908163E532300547E43 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598F6163E532300547E43 /* icon@2x.png */; };
+		F8C59909163E532300547E43 /* onpu_btn_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598F7163E532300547E43 /* onpu_btn_highlighted.png */; };
+		F8C5990A163E532300547E43 /* onpu_btn_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598F8163E532300547E43 /* onpu_btn_highlighted@2x.png */; };
+		F8C5990B163E532300547E43 /* onpu_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598F9163E532300547E43 /* onpu_btn.png */; };
+		F8C5990C163E532300547E43 /* onpu_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598FA163E532300547E43 /* onpu_btn@2x.png */; };
+		F8C5990D163E532300547E43 /* onpu.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598FB163E532300547E43 /* onpu.png */; };
+		F8C5990E163E532300547E43 /* onpu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598FC163E532300547E43 /* onpu@2x.png */; };
+		F8C5990F163E532300547E43 /* scale.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598FD163E532300547E43 /* scale.png */; };
+		F8C59910163E532300547E43 /* scale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598FE163E532300547E43 /* scale@2x.png */; };
+		F8C59911163E532300547E43 /* touchArea.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C598FF163E532300547E43 /* touchArea.png */; };
+		F8C59912163E532300547E43 /* touchArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C59900163E532300547E43 /* touchArea@2x.png */; };
+		F8C59913163E532300547E43 /* touchPoints.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C59901163E532300547E43 /* touchPoints.png */; };
+		F8C59914163E532300547E43 /* touchPoints@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C59902163E532300547E43 /* touchPoints@2x.png */; };
+		F8C59991163E78C100547E43 /* signMarkLib in Resources */ = {isa = PBXBuildFile; fileRef = F8C59990163E78C100547E43 /* signMarkLib */; };
+		F8C59993163E791300547E43 /* libsignMarkLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C59992163E791300547E43 /* libsignMarkLib.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8032DB515785703007A8061 /* onpuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = onpuView.h; sourceTree = "<group>"; };
+		F8032DB615785703007A8061 /* onpuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = onpuView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		F81D987B156FB942005058CA /* MusicStamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicStamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81D987F156FB942005058CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F81D9881156FB942005058CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F81D9883156FB942005058CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F81D9887156FB942005058CA /* MusicStamp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicStamp-Info.plist"; sourceTree = "<group>"; };
+		F81D9889156FB942005058CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F81D988B156FB942005058CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F81D988D156FB942005058CA /* MusicStamp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicStamp-Prefix.pch"; sourceTree = "<group>"; };
+		F81D988E156FB942005058CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F81D988F156FB942005058CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F81D9892156FB942005058CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F86C81FC15710CA600A75BE0 /* touchPointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = touchPointsViewController.h; sourceTree = "<group>"; };
+		F86C81FD15710CA600A75BE0 /* touchPointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = touchPointsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		F87D71CE1574F61900AF3AB1 /* measureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = measureViewController.h; sourceTree = "<group>"; };
+		F87D71CF1574F61900AF3AB1 /* measureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = measureViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		F87D71D31574F62B00AF3AB1 /* onpuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = onpuViewController.h; sourceTree = "<group>"; };
+		F87D71D41574F62B00AF3AB1 /* onpuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = onpuViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		F87D71FC157502C500AF3AB1 /* touchesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = touchesView.h; sourceTree = "<group>"; };
+		F87D71FD157502C500AF3AB1 /* touchesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = touchesView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		F87D7212157618D600AF3AB1 /* measureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = measureView.h; sourceTree = "<group>"; };
+		F87D7213157618D600AF3AB1 /* measureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = measureView.m; sourceTree = "<group>"; };
+		F87D72291576FA4A00AF3AB1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F87D722B1576FA4F00AF3AB1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F8C598E1163E530F00547E43 /* a.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = a.aif; path = sounds/a.aif; sourceTree = "<group>"; };
+		F8C598E2163E530F00547E43 /* b.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = b.aif; path = sounds/b.aif; sourceTree = "<group>"; };
+		F8C598E3163E530F00547E43 /* c.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = c.aif; path = sounds/c.aif; sourceTree = "<group>"; };
+		F8C598E4163E530F00547E43 /* d.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = d.aif; path = sounds/d.aif; sourceTree = "<group>"; };
+		F8C598E5163E530F00547E43 /* e.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = e.aif; path = sounds/e.aif; sourceTree = "<group>"; };
+		F8C598E6163E530F00547E43 /* f.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = f.aif; path = sounds/f.aif; sourceTree = "<group>"; };
+		F8C598E7163E530F00547E43 /* g.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = g.aif; path = sounds/g.aif; sourceTree = "<group>"; };
+		F8C598E8163E530F00547E43 /* input.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = input.aif; path = sounds/input.aif; sourceTree = "<group>"; };
+		F8C598F1163E532300547E43 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default.png; path = images/default.png; sourceTree = "<group>"; };
+		F8C598F2163E532300547E43 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default@2x.png"; path = "images/default@2x.png"; sourceTree = "<group>"; };
+		F8C598F3163E532300547E43 /* finger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = finger.png; path = images/finger.png; sourceTree = "<group>"; };
+		F8C598F4163E532300547E43 /* finger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "finger@2x.png"; path = "images/finger@2x.png"; sourceTree = "<group>"; };
+		F8C598F5163E532300547E43 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = images/icon.png; sourceTree = "<group>"; };
+		F8C598F6163E532300547E43 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "images/icon@2x.png"; sourceTree = "<group>"; };
+		F8C598F7163E532300547E43 /* onpu_btn_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = onpu_btn_highlighted.png; path = images/onpu_btn_highlighted.png; sourceTree = "<group>"; };
+		F8C598F8163E532300547E43 /* onpu_btn_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "onpu_btn_highlighted@2x.png"; path = "images/onpu_btn_highlighted@2x.png"; sourceTree = "<group>"; };
+		F8C598F9163E532300547E43 /* onpu_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = onpu_btn.png; path = images/onpu_btn.png; sourceTree = "<group>"; };
+		F8C598FA163E532300547E43 /* onpu_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "onpu_btn@2x.png"; path = "images/onpu_btn@2x.png"; sourceTree = "<group>"; };
+		F8C598FB163E532300547E43 /* onpu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = onpu.png; path = images/onpu.png; sourceTree = "<group>"; };
+		F8C598FC163E532300547E43 /* onpu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "onpu@2x.png"; path = "images/onpu@2x.png"; sourceTree = "<group>"; };
+		F8C598FD163E532300547E43 /* scale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale.png; path = images/scale.png; sourceTree = "<group>"; };
+		F8C598FE163E532300547E43 /* scale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scale@2x.png"; path = "images/scale@2x.png"; sourceTree = "<group>"; };
+		F8C598FF163E532300547E43 /* touchArea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = touchArea.png; path = images/touchArea.png; sourceTree = "<group>"; };
+		F8C59900163E532300547E43 /* touchArea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "touchArea@2x.png"; path = "images/touchArea@2x.png"; sourceTree = "<group>"; };
+		F8C59901163E532300547E43 /* touchPoints.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = touchPoints.png; path = images/touchPoints.png; sourceTree = "<group>"; };
+		F8C59902163E532300547E43 /* touchPoints@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "touchPoints@2x.png"; path = "images/touchPoints@2x.png"; sourceTree = "<group>"; };
+		F8C59990163E78C100547E43 /* signMarkLib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = signMarkLib; sourceTree = "<group>"; };
+		F8C59992163E791300547E43 /* libsignMarkLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsignMarkLib.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F81D9878156FB942005058CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C59993163E791300547E43 /* libsignMarkLib.a in Frameworks */,
+				F87D722C1576FA4F00AF3AB1 /* AVFoundation.framework in Frameworks */,
+				F87D722A1576FA4A00AF3AB1 /* AudioToolbox.framework in Frameworks */,
+				F81D9880156FB942005058CA /* UIKit.framework in Frameworks */,
+				F81D9882156FB942005058CA /* Foundation.framework in Frameworks */,
+				F81D9884156FB942005058CA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F81D9870156FB941005058CA = {
+			isa = PBXGroup;
+			children = (
+				F8C59992163E791300547E43 /* libsignMarkLib.a */,
+				F8C59990163E78C100547E43 /* signMarkLib */,
+				F87D7216157667BB00AF3AB1 /* sounds */,
+				F81D98A7156FB958005058CA /* images */,
+				F81D9885156FB942005058CA /* TouchStamp */,
+				F81D987E156FB942005058CA /* Frameworks */,
+				F81D987C156FB942005058CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F81D987C156FB942005058CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F81D987B156FB942005058CA /* MusicStamp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F81D987E156FB942005058CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F87D722B1576FA4F00AF3AB1 /* AVFoundation.framework */,
+				F87D72291576FA4A00AF3AB1 /* AudioToolbox.framework */,
+				F81D987F156FB942005058CA /* UIKit.framework */,
+				F81D9881156FB942005058CA /* Foundation.framework */,
+				F81D9883156FB942005058CA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F81D9885156FB942005058CA /* TouchStamp */ = {
+			isa = PBXGroup;
+			children = (
+				F87D7215157661E600AF3AB1 /* stampTabView */,
+				F87D7211157618AF00AF3AB1 /* measureTabView */,
+				F87D72101576181100AF3AB1 /* touchTabView */,
+				F81D988E156FB942005058CA /* AppDelegate.h */,
+				F81D988F156FB942005058CA /* AppDelegate.m */,
+				F81D9891156FB942005058CA /* MainStoryboard.storyboard */,
+				F81D9886156FB942005058CA /* Supporting Files */,
+			);
+			path = TouchStamp;
+			sourceTree = "<group>";
+		};
+		F81D9886156FB942005058CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F81D9887156FB942005058CA /* MusicStamp-Info.plist */,
+				F81D9888156FB942005058CA /* InfoPlist.strings */,
+				F81D988B156FB942005058CA /* main.m */,
+				F81D988D156FB942005058CA /* MusicStamp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F81D98A7156FB958005058CA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F8C598F1163E532300547E43 /* default.png */,
+				F8C598F2163E532300547E43 /* default@2x.png */,
+				F8C598F3163E532300547E43 /* finger.png */,
+				F8C598F4163E532300547E43 /* finger@2x.png */,
+				F8C598F5163E532300547E43 /* icon.png */,
+				F8C598F6163E532300547E43 /* icon@2x.png */,
+				F8C598F7163E532300547E43 /* onpu_btn_highlighted.png */,
+				F8C598F8163E532300547E43 /* onpu_btn_highlighted@2x.png */,
+				F8C598F9163E532300547E43 /* onpu_btn.png */,
+				F8C598FA163E532300547E43 /* onpu_btn@2x.png */,
+				F8C598FB163E532300547E43 /* onpu.png */,
+				F8C598FC163E532300547E43 /* onpu@2x.png */,
+				F8C598FD163E532300547E43 /* scale.png */,
+				F8C598FE163E532300547E43 /* scale@2x.png */,
+				F8C598FF163E532300547E43 /* touchArea.png */,
+				F8C59900163E532300547E43 /* touchArea@2x.png */,
+				F8C59901163E532300547E43 /* touchPoints.png */,
+				F8C59902163E532300547E43 /* touchPoints@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		F87D72101576181100AF3AB1 /* touchTabView */ = {
+			isa = PBXGroup;
+			children = (
+				F87D71FC157502C500AF3AB1 /* touchesView.h */,
+				F87D71FD157502C500AF3AB1 /* touchesView.m */,
+				F86C81FC15710CA600A75BE0 /* touchPointsViewController.h */,
+				F86C81FD15710CA600A75BE0 /* touchPointsViewController.m */,
+			);
+			name = touchTabView;
+			sourceTree = "<group>";
+		};
+		F87D7211157618AF00AF3AB1 /* measureTabView */ = {
+			isa = PBXGroup;
+			children = (
+				F87D7212157618D600AF3AB1 /* measureView.h */,
+				F87D7213157618D600AF3AB1 /* measureView.m */,
+				F87D71CE1574F61900AF3AB1 /* measureViewController.h */,
+				F87D71CF1574F61900AF3AB1 /* measureViewController.m */,
+			);
+			name = measureTabView;
+			sourceTree = "<group>";
+		};
+		F87D7215157661E600AF3AB1 /* stampTabView */ = {
+			isa = PBXGroup;
+			children = (
+				F8032DB515785703007A8061 /* onpuView.h */,
+				F8032DB615785703007A8061 /* onpuView.m */,
+				F87D71D31574F62B00AF3AB1 /* onpuViewController.h */,
+				F87D71D41574F62B00AF3AB1 /* onpuViewController.m */,
+			);
+			name = stampTabView;
+			sourceTree = "<group>";
+		};
+		F87D7216157667BB00AF3AB1 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F8C598E1163E530F00547E43 /* a.aif */,
+				F8C598E2163E530F00547E43 /* b.aif */,
+				F8C598E3163E530F00547E43 /* c.aif */,
+				F8C598E4163E530F00547E43 /* d.aif */,
+				F8C598E5163E530F00547E43 /* e.aif */,
+				F8C598E6163E530F00547E43 /* f.aif */,
+				F8C598E7163E530F00547E43 /* g.aif */,
+				F8C598E8163E530F00547E43 /* input.aif */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F81D987A156FB942005058CA /* MusicStamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F81D98A4156FB942005058CA /* Build configuration list for PBXNativeTarget "MusicStamp" */;
+			buildPhases = (
+				F81D9877156FB942005058CA /* Sources */,
+				F81D9878156FB942005058CA /* Frameworks */,
+				F81D9879156FB942005058CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicStamp;
+			productName = TouchStamp;
+			productReference = F81D987B156FB942005058CA /* MusicStamp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F81D9872156FB941005058CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "REINFORCE Lab.";
+			};
+			buildConfigurationList = F81D9875156FB941005058CA /* Build configuration list for PBXProject "MusicStamp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F81D9870156FB941005058CA;
+			productRefGroup = F81D987C156FB942005058CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F81D987A156FB942005058CA /* MusicStamp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F81D9879156FB942005058CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81D988A156FB942005058CA /* InfoPlist.strings in Resources */,
+				F81D9893156FB942005058CA /* MainStoryboard.storyboard in Resources */,
+				F8C598E9163E530F00547E43 /* a.aif in Resources */,
+				F8C598EA163E530F00547E43 /* b.aif in Resources */,
+				F8C598EB163E530F00547E43 /* c.aif in Resources */,
+				F8C598EC163E530F00547E43 /* d.aif in Resources */,
+				F8C598ED163E530F00547E43 /* e.aif in Resources */,
+				F8C598EE163E530F00547E43 /* f.aif in Resources */,
+				F8C598EF163E530F00547E43 /* g.aif in Resources */,
+				F8C598F0163E530F00547E43 /* input.aif in Resources */,
+				F8C59903163E532300547E43 /* default.png in Resources */,
+				F8C59904163E532300547E43 /* default@2x.png in Resources */,
+				F8C59905163E532300547E43 /* finger.png in Resources */,
+				F8C59906163E532300547E43 /* finger@2x.png in Resources */,
+				F8C59907163E532300547E43 /* icon.png in Resources */,
+				F8C59908163E532300547E43 /* icon@2x.png in Resources */,
+				F8C59909163E532300547E43 /* onpu_btn_highlighted.png in Resources */,
+				F8C5990A163E532300547E43 /* onpu_btn_highlighted@2x.png in Resources */,
+				F8C5990B163E532300547E43 /* onpu_btn.png in Resources */,
+				F8C5990C163E532300547E43 /* onpu_btn@2x.png in Resources */,
+				F8C5990D163E532300547E43 /* onpu.png in Resources */,
+				F8C5990E163E532300547E43 /* onpu@2x.png in Resources */,
+				F8C5990F163E532300547E43 /* scale.png in Resources */,
+				F8C59910163E532300547E43 /* scale@2x.png in Resources */,
+				F8C59911163E532300547E43 /* touchArea.png in Resources */,
+				F8C59912163E532300547E43 /* touchArea@2x.png in Resources */,
+				F8C59913163E532300547E43 /* touchPoints.png in Resources */,
+				F8C59914163E532300547E43 /* touchPoints@2x.png in Resources */,
+				F8C59991163E78C100547E43 /* signMarkLib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F81D9877156FB942005058CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81D988C156FB942005058CA /* main.m in Sources */,
+				F81D9890156FB942005058CA /* AppDelegate.m in Sources */,
+				F86C81FF15710CA600A75BE0 /* touchPointsViewController.m in Sources */,
+				F87D71D11574F61900AF3AB1 /* measureViewController.m in Sources */,
+				F87D71D61574F62B00AF3AB1 /* onpuViewController.m in Sources */,
+				F87D71FE157502C500AF3AB1 /* touchesView.m in Sources */,
+				F87D7214157618D600AF3AB1 /* measureView.m in Sources */,
+				F8032DB715785703007A8061 /* onpuView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F81D9888156FB942005058CA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F81D9889156FB942005058CA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F81D9891156FB942005058CA /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F81D9892156FB942005058CA /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F81D98A2156FB942005058CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		F81D98A3156FB942005058CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F81D98A5156FB942005058CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TouchStamp/MusicStamp-Prefix.pch";
+				INFOPLIST_FILE = "TouchStamp/MusicStamp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = "-lsignMarkLib";
+				PRODUCT_NAME = MusicStamp;
+				USER_HEADER_SEARCH_PATHS = "../../../**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F81D98A6156FB942005058CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TouchStamp/MusicStamp-Prefix.pch";
+				INFOPLIST_FILE = "TouchStamp/MusicStamp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = "-lsignMarkLib";
+				PRODUCT_NAME = MusicStamp;
+				USER_HEADER_SEARCH_PATHS = "../../../**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F81D9875156FB941005058CA /* Build configuration list for PBXProject "MusicStamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81D98A2156FB942005058CA /* Debug */,
+				F81D98A3156FB942005058CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F81D98A4156FB942005058CA /* Build configuration list for PBXNativeTarget "MusicStamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81D98A5156FB942005058CA /* Debug */,
+				F81D98A6156FB942005058CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F81D9872156FB941005058CA /* Project object */;
+}

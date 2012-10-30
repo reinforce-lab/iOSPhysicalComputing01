@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F84D7355140DE8CD00D607A5 /* AudioPHY.h in Headers */ = {isa = PBXBuildFile; fileRef = F84D7351140DE8CD00D607A5 /* AudioPHY.h */; };
+		F84D7356140DE8CD00D607A5 /* AudioPHY.m in Sources */ = {isa = PBXBuildFile; fileRef = F84D7352140DE8CD00D607A5 /* AudioPHY.m */; };
+		F84D735F140DE91100D607A5 /* SWMSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F84D735C140DE91100D607A5 /* SWMSocket.h */; };
+		F84D737F140DE9E400D607A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84D737E140DE9E400D607A5 /* AVFoundation.framework */; };
+		F84D7381140DE9EC00D607A5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84D7380140DE9EC00D607A5 /* AudioToolbox.framework */; };
+		F84D7388140F11F700D607A5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B086F9140C93D8001632F1 /* SenTestingKit.framework */; };
+		F84D738A140F11F700D607A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84D7389140F11F700D607A5 /* UIKit.framework */; };
+		F84D738B140F11F700D607A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B086EB140C93D8001632F1 /* Foundation.framework */; };
+		F84D7391140F11F700D607A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F84D738F140F11F700D607A5 /* InfoPlist.strings */; };
+		F84D7399140F125900D607A5 /* libOTOplug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B086E8140C93D8001632F1 /* libOTOplug.a */; };
+		F84D7426140F587B00D607A5 /* MockPHY.m in Sources */ = {isa = PBXBuildFile; fileRef = F84D73FF140F56A400D607A5 /* MockPHY.m */; };
+		F84D742A140F58EE00D607A5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84D7380140DE9EC00D607A5 /* AudioToolbox.framework */; };
+		F84D742B140F58F200D607A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84D737E140DE9E400D607A5 /* AVFoundation.framework */; };
+		F89088F11410DAE00038E6C0 /* OTORawSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F89088EF1410DAE00038E6C0 /* OTORawSocket.h */; };
+		F89088F21410DAE00038E6C0 /* OTORawSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F89088F01410DAE00038E6C0 /* OTORawSocket.m */; };
+		F89088F31410DAE00038E6C0 /* OTORawSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F89088F01410DAE00038E6C0 /* OTORawSocket.m */; };
+		F89088F61410DAF70038E6C0 /* OTOPacketSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F89088F41410DAF70038E6C0 /* OTOPacketSocket.h */; };
+		F89088F71410DAF70038E6C0 /* OTOPacketSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F89088F51410DAF70038E6C0 /* OTOPacketSocket.m */; };
+		F89088F81410DAF70038E6C0 /* OTOPacketSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F89088F51410DAF70038E6C0 /* OTOPacketSocket.m */; };
+		F89089011410E3470038E6C0 /* SWMModem.h in Headers */ = {isa = PBXBuildFile; fileRef = F89088FF1410E3470038E6C0 /* SWMModem.h */; };
+		F89089291410ECE50038E6C0 /* OTOplugDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F89089281410ECE50038E6C0 /* OTOplugDelegate.h */; };
+		F89089311410F44C0038E6C0 /* PWMConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F890892A1410F44C0038E6C0 /* PWMConstants.h */; };
+		F89089321410F44C0038E6C0 /* PWMDemodulator.h in Headers */ = {isa = PBXBuildFile; fileRef = F890892B1410F44C0038E6C0 /* PWMDemodulator.h */; };
+		F89089331410F44C0038E6C0 /* PWMDemodulator.m in Sources */ = {isa = PBXBuildFile; fileRef = F890892C1410F44C0038E6C0 /* PWMDemodulator.m */; };
+		F89089341410F44C0038E6C0 /* PWMDemodulator.m in Sources */ = {isa = PBXBuildFile; fileRef = F890892C1410F44C0038E6C0 /* PWMDemodulator.m */; };
+		F89089351410F44C0038E6C0 /* PWMModem.h in Headers */ = {isa = PBXBuildFile; fileRef = F890892D1410F44C0038E6C0 /* PWMModem.h */; };
+		F89089361410F44C0038E6C0 /* PWMModem.m in Sources */ = {isa = PBXBuildFile; fileRef = F890892E1410F44C0038E6C0 /* PWMModem.m */; };
+		F89089371410F44C0038E6C0 /* PWMModem.m in Sources */ = {isa = PBXBuildFile; fileRef = F890892E1410F44C0038E6C0 /* PWMModem.m */; };
+		F89089381410F44C0038E6C0 /* PWMModulator.h in Headers */ = {isa = PBXBuildFile; fileRef = F890892F1410F44C0038E6C0 /* PWMModulator.h */; };
+		F89089391410F44C0038E6C0 /* PWMModulator.m in Sources */ = {isa = PBXBuildFile; fileRef = F89089301410F44C0038E6C0 /* PWMModulator.m */; };
+		F890893A1410F44C0038E6C0 /* PWMModulator.m in Sources */ = {isa = PBXBuildFile; fileRef = F89089301410F44C0038E6C0 /* PWMModulator.m */; };
+		F890893D14126F2B0038E6C0 /* AudioPHYDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F890893B14126F2B0038E6C0 /* AudioPHYDelegate.h */; };
+		F89089531414AC8C0038E6C0 /* OTORawSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F89089501414AC8C0038E6C0 /* OTORawSocketTests.m */; };
+		F8B086EC140C93D8001632F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B086EB140C93D8001632F1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F84D739A140F125D00D607A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B086DF140C93D8001632F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8B086E7140C93D8001632F1;
+			remoteInfo = OTOplug;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F84D7351140DE8CD00D607A5 /* AudioPHY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPHY.h; path = AudioPHY/AudioPHY.h; sourceTree = "<group>"; };
+		F84D7352140DE8CD00D607A5 /* AudioPHY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioPHY.m; path = AudioPHY/AudioPHY.m; sourceTree = "<group>"; };
+		F84D735C140DE91100D607A5 /* SWMSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWMSocket.h; path = Protocols/SWMSocket.h; sourceTree = "<group>"; };
+		F84D737E140DE9E400D607A5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F84D7380140DE9EC00D607A5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F84D7387140F11F700D607A5 /* OTOplugLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTOplugLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84D7389140F11F700D607A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F84D738E140F11F700D607A5 /* OTOplugLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OTOplugLogicTests-Info.plist"; sourceTree = "<group>"; };
+		F84D7390140F11F700D607A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F84D7395140F11F700D607A5 /* OTOplugLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTOplugLogicTests-Prefix.pch"; sourceTree = "<group>"; };
+		F84D73FE140F56A400D607A5 /* MockPHY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPHY.h; sourceTree = "<group>"; };
+		F84D73FF140F56A400D607A5 /* MockPHY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPHY.m; sourceTree = "<group>"; };
+		F89088EF1410DAE00038E6C0 /* OTORawSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTORawSocket.h; sourceTree = "<group>"; };
+		F89088F01410DAE00038E6C0 /* OTORawSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTORawSocket.m; sourceTree = "<group>"; };
+		F89088F41410DAF70038E6C0 /* OTOPacketSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTOPacketSocket.h; sourceTree = "<group>"; };
+		F89088F51410DAF70038E6C0 /* OTOPacketSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTOPacketSocket.m; sourceTree = "<group>"; };
+		F89088FF1410E3470038E6C0 /* SWMModem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWMModem.h; path = Protocols/SWMModem.h; sourceTree = "<group>"; };
+		F89089281410ECE50038E6C0 /* OTOplugDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTOplugDelegate.h; sourceTree = "<group>"; };
+		F890892A1410F44C0038E6C0 /* PWMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PWMConstants.h; path = PWMModem/PWMConstants.h; sourceTree = SOURCE_ROOT; };
+		F890892B1410F44C0038E6C0 /* PWMDemodulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PWMDemodulator.h; path = PWMModem/PWMDemodulator.h; sourceTree = SOURCE_ROOT; };
+		F890892C1410F44C0038E6C0 /* PWMDemodulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PWMDemodulator.m; path = PWMModem/PWMDemodulator.m; sourceTree = SOURCE_ROOT; };
+		F890892D1410F44C0038E6C0 /* PWMModem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PWMModem.h; path = PWMModem/PWMModem.h; sourceTree = SOURCE_ROOT; };
+		F890892E1410F44C0038E6C0 /* PWMModem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PWMModem.m; path = PWMModem/PWMModem.m; sourceTree = SOURCE_ROOT; };
+		F890892F1410F44C0038E6C0 /* PWMModulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PWMModulator.h; path = PWMModem/PWMModulator.h; sourceTree = SOURCE_ROOT; };
+		F89089301410F44C0038E6C0 /* PWMModulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PWMModulator.m; path = PWMModem/PWMModulator.m; sourceTree = SOURCE_ROOT; };
+		F890893B14126F2B0038E6C0 /* AudioPHYDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPHYDelegate.h; path = AudioPHY/AudioPHYDelegate.h; sourceTree = "<group>"; };
+		F890894F1414AC8C0038E6C0 /* OTORawSocketTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTORawSocketTests.h; sourceTree = "<group>"; };
+		F89089501414AC8C0038E6C0 /* OTORawSocketTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTORawSocketTests.m; sourceTree = "<group>"; };
+		F8B086E8140C93D8001632F1 /* libOTOplug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOTOplug.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B086EB140C93D8001632F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F8B086EF140C93D8001632F1 /* OTOplug-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTOplug-Prefix.pch"; sourceTree = "<group>"; };
+		F8B086F9140C93D8001632F1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F84D7383140F11F700D607A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84D7399140F125900D607A5 /* libOTOplug.a in Frameworks */,
+				F84D7388140F11F700D607A5 /* SenTestingKit.framework in Frameworks */,
+				F84D738A140F11F700D607A5 /* UIKit.framework in Frameworks */,
+				F84D738B140F11F700D607A5 /* Foundation.framework in Frameworks */,
+				F84D742A140F58EE00D607A5 /* AudioToolbox.framework in Frameworks */,
+				F84D742B140F58F200D607A5 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B086E5140C93D8001632F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84D7381140DE9EC00D607A5 /* AudioToolbox.framework in Frameworks */,
+				F84D737F140DE9E400D607A5 /* AVFoundation.framework in Frameworks */,
+				F8B086EC140C93D8001632F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F84D738C140F11F700D607A5 /* OTOplugLogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				F890894F1414AC8C0038E6C0 /* OTORawSocketTests.h */,
+				F89089501414AC8C0038E6C0 /* OTORawSocketTests.m */,
+				F84D73FE140F56A400D607A5 /* MockPHY.h */,
+				F84D73FF140F56A400D607A5 /* MockPHY.m */,
+				F84D738D140F11F700D607A5 /* Supporting Files */,
+			);
+			path = OTOplugLogicTests;
+			sourceTree = "<group>";
+		};
+		F84D738D140F11F700D607A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F84D738E140F11F700D607A5 /* OTOplugLogicTests-Info.plist */,
+				F84D738F140F11F700D607A5 /* InfoPlist.strings */,
+				F84D7395140F11F700D607A5 /* OTOplugLogicTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F89088C11410BB760038E6C0 /* PWMModem */ = {
+			isa = PBXGroup;
+			children = (
+				F890892A1410F44C0038E6C0 /* PWMConstants.h */,
+				F890892B1410F44C0038E6C0 /* PWMDemodulator.h */,
+				F890892C1410F44C0038E6C0 /* PWMDemodulator.m */,
+				F890892D1410F44C0038E6C0 /* PWMModem.h */,
+				F890892E1410F44C0038E6C0 /* PWMModem.m */,
+				F890892F1410F44C0038E6C0 /* PWMModulator.h */,
+				F89089301410F44C0038E6C0 /* PWMModulator.m */,
+			);
+			name = PWMModem;
+			path = OTOplug;
+			sourceTree = "<group>";
+		};
+		F8B086DD140C93D8001632F1 = {
+			isa = PBXGroup;
+			children = (
+				F8B086ED140C93D8001632F1 /* OTOplug */,
+				F8B0871B140C9480001632F1 /* AudioPHY */,
+				F8B0871D140C9493001632F1 /* Protocols */,
+				F89088C11410BB760038E6C0 /* PWMModem */,
+				F84D738C140F11F700D607A5 /* OTOplugLogicTests */,
+				F8B086EA140C93D8001632F1 /* Frameworks */,
+				F8B086E9140C93D8001632F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8B086E9140C93D8001632F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8B086E8140C93D8001632F1 /* libOTOplug.a */,
+				F84D7387140F11F700D607A5 /* OTOplugLogicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8B086EA140C93D8001632F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F84D7380140DE9EC00D607A5 /* AudioToolbox.framework */,
+				F84D737E140DE9E400D607A5 /* AVFoundation.framework */,
+				F8B086EB140C93D8001632F1 /* Foundation.framework */,
+				F8B086F9140C93D8001632F1 /* SenTestingKit.framework */,
+				F84D7389140F11F700D607A5 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8B086ED140C93D8001632F1 /* OTOplug */ = {
+			isa = PBXGroup;
+			children = (
+				F89089281410ECE50038E6C0 /* OTOplugDelegate.h */,
+				F89088EF1410DAE00038E6C0 /* OTORawSocket.h */,
+				F89088F01410DAE00038E6C0 /* OTORawSocket.m */,
+				F89088F41410DAF70038E6C0 /* OTOPacketSocket.h */,
+				F89088F51410DAF70038E6C0 /* OTOPacketSocket.m */,
+				F8B086EE140C93D8001632F1 /* Supporting Files */,
+			);
+			path = OTOplug;
+			sourceTree = "<group>";
+		};
+		F8B086EE140C93D8001632F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8B086EF140C93D8001632F1 /* OTOplug-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8B0871B140C9480001632F1 /* AudioPHY */ = {
+			isa = PBXGroup;
+			children = (
+				F890893B14126F2B0038E6C0 /* AudioPHYDelegate.h */,
+				F84D7351140DE8CD00D607A5 /* AudioPHY.h */,
+				F84D7352140DE8CD00D607A5 /* AudioPHY.m */,
+			);
+			name = AudioPHY;
+			sourceTree = "<group>";
+		};
+		F8B0871D140C9493001632F1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F84D735C140DE91100D607A5 /* SWMSocket.h */,
+				F89088FF1410E3470038E6C0 /* SWMModem.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F8B086E6140C93D8001632F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84D7355140DE8CD00D607A5 /* AudioPHY.h in Headers */,
+				F84D735F140DE91100D607A5 /* SWMSocket.h in Headers */,
+				F89088F11410DAE00038E6C0 /* OTORawSocket.h in Headers */,
+				F89088F61410DAF70038E6C0 /* OTOPacketSocket.h in Headers */,
+				F89089011410E3470038E6C0 /* SWMModem.h in Headers */,
+				F89089291410ECE50038E6C0 /* OTOplugDelegate.h in Headers */,
+				F89089311410F44C0038E6C0 /* PWMConstants.h in Headers */,
+				F89089321410F44C0038E6C0 /* PWMDemodulator.h in Headers */,
+				F89089351410F44C0038E6C0 /* PWMModem.h in Headers */,
+				F89089381410F44C0038E6C0 /* PWMModulator.h in Headers */,
+				F890893D14126F2B0038E6C0 /* AudioPHYDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F84D7386140F11F700D607A5 /* OTOplugLogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F84D7396140F11F700D607A5 /* Build configuration list for PBXNativeTarget "OTOplugLogicTests" */;
+			buildPhases = (
+				F84D7382140F11F700D607A5 /* Sources */,
+				F84D7383140F11F700D607A5 /* Frameworks */,
+				F84D7384140F11F700D607A5 /* Resources */,
+				F84D7385140F11F700D607A5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F84D739B140F125D00D607A5 /* PBXTargetDependency */,
+			);
+			name = OTOplugLogicTests;
+			productName = OTOplugLogicTests;
+			productReference = F84D7387140F11F700D607A5 /* OTOplugLogicTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		F8B086E7140C93D8001632F1 /* OTOplug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B0870E140C93D8001632F1 /* Build configuration list for PBXNativeTarget "OTOplug" */;
+			buildPhases = (
+				F8B086E4140C93D8001632F1 /* Sources */,
+				F8B086E5140C93D8001632F1 /* Frameworks */,
+				F8B086E6140C93D8001632F1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTOplug;
+			productName = OTOplug;
+			productReference = F8B086E8140C93D8001632F1 /* libOTOplug.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8B086DF140C93D8001632F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = F8B086E2140C93D8001632F1 /* Build configuration list for PBXProject "OTOplug" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F8B086DD140C93D8001632F1;
+			productRefGroup = F8B086E9140C93D8001632F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8B086E7140C93D8001632F1 /* OTOplug */,
+				F84D7386140F11F700D607A5 /* OTOplugLogicTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F84D7384140F11F700D607A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84D7391140F11F700D607A5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F84D7385140F11F700D607A5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F84D7382140F11F700D607A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84D7426140F587B00D607A5 /* MockPHY.m in Sources */,
+				F89088F31410DAE00038E6C0 /* OTORawSocket.m in Sources */,
+				F89088F81410DAF70038E6C0 /* OTOPacketSocket.m in Sources */,
+				F89089341410F44C0038E6C0 /* PWMDemodulator.m in Sources */,
+				F89089371410F44C0038E6C0 /* PWMModem.m in Sources */,
+				F890893A1410F44C0038E6C0 /* PWMModulator.m in Sources */,
+				F89089531414AC8C0038E6C0 /* OTORawSocketTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B086E4140C93D8001632F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84D7356140DE8CD00D607A5 /* AudioPHY.m in Sources */,
+				F89088F21410DAE00038E6C0 /* OTORawSocket.m in Sources */,
+				F89088F71410DAF70038E6C0 /* OTOPacketSocket.m in Sources */,
+				F89089331410F44C0038E6C0 /* PWMDemodulator.m in Sources */,
+				F89089361410F44C0038E6C0 /* PWMModem.m in Sources */,
+				F89089391410F44C0038E6C0 /* PWMModulator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F84D739B140F125D00D607A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8B086E7140C93D8001632F1 /* OTOplug */;
+			targetProxy = F84D739A140F125D00D607A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F84D738F140F11F700D607A5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F84D7390140F11F700D607A5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F84D7397140F11F700D607A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OTOplugLogicTests/OTOplugLogicTests-Prefix.pch";
+				INFOPLIST_FILE = "OTOplugLogicTests/OTOplugLogicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F84D7398140F11F700D607A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OTOplugLogicTests/OTOplugLogicTests-Prefix.pch";
+				INFOPLIST_FILE = "OTOplugLogicTests/OTOplugLogicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		F8B0870C140C93D8001632F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F8B0870D140C93D8001632F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8B0870F140C93D8001632F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/OTOplug.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OTOplug/OTOplug-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F8B08710140C93D8001632F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/OTOplug.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OTOplug/OTOplug-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F84D7396140F11F700D607A5 /* Build configuration list for PBXNativeTarget "OTOplugLogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F84D7397140F11F700D607A5 /* Debug */,
+				F84D7398140F11F700D607A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8B086E2140C93D8001632F1 /* Build configuration list for PBXProject "OTOplug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B0870C140C93D8001632F1 /* Debug */,
+				F8B0870D140C93D8001632F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8B0870E140C93D8001632F1 /* Build configuration list for PBXNativeTarget "OTOplug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B0870F140C93D8001632F1 /* Debug */,
+				F8B08710140C93D8001632F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8B086DF140C93D8001632F1 /* Project object */;
+}

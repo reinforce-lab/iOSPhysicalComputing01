@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F804AB49157AF3CF00AC733C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F804AB48157AF3CF00AC733C /* UIKit.framework */; };
+		F804AB4B157AF3CF00AC733C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F804AB4A157AF3CF00AC733C /* Foundation.framework */; };
+		F804AB4D157AF3CF00AC733C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F804AB4C157AF3CF00AC733C /* CoreGraphics.framework */; };
+		F804AB53157AF3CF00AC733C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F804AB51157AF3CF00AC733C /* InfoPlist.strings */; };
+		F804AB55157AF3CF00AC733C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F804AB54157AF3CF00AC733C /* main.m */; };
+		F804AB59157AF3CF00AC733C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F804AB58157AF3CF00AC733C /* AppDelegate.m */; };
+		F804AB5C157AF3CF00AC733C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F804AB5A157AF3CF00AC733C /* MainStoryboard.storyboard */; };
+		F804ABA3157AF4B200AC733C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F804ABA2157AF4B200AC733C /* AVFoundation.framework */; };
+		F804ABA5157AF4BA00AC733C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F804ABA4157AF4BA00AC733C /* AudioToolbox.framework */; };
+		F804ABB5157C340800AC733C /* LEDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F804ABB4157C340800AC733C /* LEDViewController.m */; };
+		F804ABB8157C346E00AC733C /* BrightnessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F804ABB7157C346E00AC733C /* BrightnessViewController.m */; };
+		F804ABBB157C4D3D00AC733C /* FlashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F804ABBA157C4D3D00AC733C /* FlashViewController.m */; };
+		F804ABBE157C4ECA00AC733C /* DoubleLEDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F804ABBD157C4ECA00AC733C /* DoubleLEDViewController.m */; };
+		F804AC421581DFA700AC733C /* 2led_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC2E1581DFA700AC733C /* 2led_icon.png */; };
+		F804AC431581DFA700AC733C /* 2led_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC2F1581DFA700AC733C /* 2led_icon@2x.png */; };
+		F804AC441581DFA700AC733C /* ballon_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC301581DFA700AC733C /* ballon_bottom.png */; };
+		F804AC451581DFA700AC733C /* ballon_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC311581DFA700AC733C /* ballon_bottom@2x.png */; };
+		F804AC461581DFA700AC733C /* ballon_left.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC321581DFA700AC733C /* ballon_left.png */; };
+		F804AC471581DFA700AC733C /* ballon_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC331581DFA700AC733C /* ballon_left@2x.png */; };
+		F804AC481581DFA700AC733C /* ballon_up.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC341581DFA700AC733C /* ballon_up.png */; };
+		F804AC491581DFA700AC733C /* ballon_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC351581DFA700AC733C /* ballon_up@2x.png */; };
+		F804AC4A1581DFA700AC733C /* brightness_control_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC361581DFA700AC733C /* brightness_control_icon.png */; };
+		F804AC4B1581DFA700AC733C /* brightness_control_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC371581DFA700AC733C /* brightness_control_icon@2x.png */; };
+		F804AC4C1581DFA700AC733C /* flash_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC381581DFA700AC733C /* flash_icon.png */; };
+		F804AC4D1581DFA700AC733C /* flash_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC391581DFA700AC733C /* flash_icon@2x.png */; };
+		F804AC4E1581DFA700AC733C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3A1581DFA700AC733C /* icon.png */; };
+		F804AC4F1581DFA700AC733C /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3B1581DFA700AC733C /* icon@2x.png */; };
+		F804AC501581DFA700AC733C /* led_button_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3C1581DFA700AC733C /* led_button_highlighted.png */; };
+		F804AC511581DFA700AC733C /* led_button_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3D1581DFA700AC733C /* led_button_highlighted@2x.png */; };
+		F804AC521581DFA700AC733C /* led_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3E1581DFA700AC733C /* led_button.png */; };
+		F804AC531581DFA700AC733C /* led_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3F1581DFA700AC733C /* led_button@2x.png */; };
+		F804AC541581DFA700AC733C /* led_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC401581DFA700AC733C /* led_icon.png */; };
+		F804AC551581DFA700AC733C /* led_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC411581DFA700AC733C /* led_icon@2x.png */; };
+		F804AC661582C37200AC733C /* LEDjackController.m in Sources */ = {isa = PBXBuildFile; fileRef = F804AC651582C37200AC733C /* LEDjackController.m */; };
+		F804AC6A158380D700AC733C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC69158380D700AC733C /* Default.png */; };
+		F848E93F163E9699001ECE5E /* FaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = F848E93E163E9699001ECE5E /* FaceDetector.m */; };
+		F848E945163E9A0D001ECE5E /* FaceDetectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F848E944163E9A0D001ECE5E /* FaceDetectionViewController.m */; };
+		F848E947163FA9D2001ECE5E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F848E946163FA9D2001ECE5E /* CoreVideo.framework */; };
+		F848E949163FA9EA001ECE5E /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F848E948163FA9EA001ECE5E /* CoreImage.framework */; };
+		F848E94B163FAA2C001ECE5E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F848E94A163FAA2C001ECE5E /* QuartzCore.framework */; };
+		F848E94D163FAA57001ECE5E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F848E94C163FAA57001ECE5E /* CoreMedia.framework */; };
+		F848E953163FB83C001ECE5E /* rotatableTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F848E952163FB83B001ECE5E /* rotatableTabBarController.m */; };
+		F848E99F1640090E001ECE5E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F848E99E1640090E001ECE5E /* Default@2x.png */; };
+		F848E9CD16400DB3001ECE5E /* libleddrive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F848E9CC16400DB3001ECE5E /* libleddrive.a */; };
+		F8B5A7F4159FAFD700A376AF /* facedet_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B5A7F2159FAFD700A376AF /* facedet_icon.png */; };
+		F8B5A7F5159FAFD700A376AF /* facedet_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B5A7F3159FAFD700A376AF /* facedet_icon@2x.png */; };
+		F8D7673115AA6B3700D5BA0C /* mortor_button_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D7672D15AA6B3700D5BA0C /* mortor_button_highlighted.png */; };
+		F8D7673215AA6B3700D5BA0C /* mortor_button_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D7672E15AA6B3700D5BA0C /* mortor_button_highlighted@2x.png */; };
+		F8D7673315AA6B3700D5BA0C /* mortor_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D7672F15AA6B3700D5BA0C /* mortor_button.png */; };
+		F8D7673415AA6B3700D5BA0C /* mortor_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D7673015AA6B3700D5BA0C /* mortor_button@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F804AB44157AF3CF00AC733C /* LEDjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEDjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F804AB48157AF3CF00AC733C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F804AB4A157AF3CF00AC733C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F804AB4C157AF3CF00AC733C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F804AB50157AF3CF00AC733C /* LEDjack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LEDjack-Info.plist"; sourceTree = "<group>"; };
+		F804AB52157AF3CF00AC733C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F804AB54157AF3CF00AC733C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F804AB56157AF3CF00AC733C /* LEDjack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LEDjack-Prefix.pch"; sourceTree = "<group>"; };
+		F804AB57157AF3CF00AC733C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F804AB58157AF3CF00AC733C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F804AB5B157AF3CF00AC733C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F804ABA2157AF4B200AC733C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F804ABA4157AF4BA00AC733C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F804ABB3157C340800AC733C /* LEDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDViewController.h; sourceTree = "<group>"; };
+		F804ABB4157C340800AC733C /* LEDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDViewController.m; sourceTree = "<group>"; };
+		F804ABB6157C346E00AC733C /* BrightnessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrightnessViewController.h; sourceTree = "<group>"; };
+		F804ABB7157C346E00AC733C /* BrightnessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrightnessViewController.m; sourceTree = "<group>"; };
+		F804ABB9157C4D3D00AC733C /* FlashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewController.h; sourceTree = "<group>"; };
+		F804ABBA157C4D3D00AC733C /* FlashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewController.m; sourceTree = "<group>"; };
+		F804ABBC157C4ECA00AC733C /* DoubleLEDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleLEDViewController.h; sourceTree = "<group>"; };
+		F804ABBD157C4ECA00AC733C /* DoubleLEDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleLEDViewController.m; sourceTree = "<group>"; };
+		F804AC18157DA2A800AC733C /* LEDDiffDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDDiffDriver.h; path = LEDjackLib/LEDDiffDriver.h; sourceTree = "<group>"; };
+		F804AC271580AF6800AC733C /* AudioSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioSocket.h; path = LEDjackLib/AudioSocket.h; sourceTree = "<group>"; };
+		F804AC2E1581DFA700AC733C /* 2led_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2led_icon.png; path = LEDjack/images/2led_icon.png; sourceTree = "<group>"; };
+		F804AC2F1581DFA700AC733C /* 2led_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "2led_icon@2x.png"; path = "LEDjack/images/2led_icon@2x.png"; sourceTree = "<group>"; };
+		F804AC301581DFA700AC733C /* ballon_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ballon_bottom.png; path = LEDjack/images/ballon_bottom.png; sourceTree = "<group>"; };
+		F804AC311581DFA700AC733C /* ballon_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ballon_bottom@2x.png"; path = "LEDjack/images/ballon_bottom@2x.png"; sourceTree = "<group>"; };
+		F804AC321581DFA700AC733C /* ballon_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ballon_left.png; path = LEDjack/images/ballon_left.png; sourceTree = "<group>"; };
+		F804AC331581DFA700AC733C /* ballon_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ballon_left@2x.png"; path = "LEDjack/images/ballon_left@2x.png"; sourceTree = "<group>"; };
+		F804AC341581DFA700AC733C /* ballon_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ballon_up.png; path = LEDjack/images/ballon_up.png; sourceTree = "<group>"; };
+		F804AC351581DFA700AC733C /* ballon_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ballon_up@2x.png"; path = "LEDjack/images/ballon_up@2x.png"; sourceTree = "<group>"; };
+		F804AC361581DFA700AC733C /* brightness_control_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brightness_control_icon.png; path = LEDjack/images/brightness_control_icon.png; sourceTree = "<group>"; };
+		F804AC371581DFA700AC733C /* brightness_control_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "brightness_control_icon@2x.png"; path = "LEDjack/images/brightness_control_icon@2x.png"; sourceTree = "<group>"; };
+		F804AC381581DFA700AC733C /* flash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flash_icon.png; path = LEDjack/images/flash_icon.png; sourceTree = "<group>"; };
+		F804AC391581DFA700AC733C /* flash_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flash_icon@2x.png"; path = "LEDjack/images/flash_icon@2x.png"; sourceTree = "<group>"; };
+		F804AC3A1581DFA700AC733C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = LEDjack/images/icon.png; sourceTree = "<group>"; };
+		F804AC3B1581DFA700AC733C /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "LEDjack/images/icon@2x.png"; sourceTree = "<group>"; };
+		F804AC3C1581DFA700AC733C /* led_button_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = led_button_highlighted.png; path = LEDjack/images/led_button_highlighted.png; sourceTree = "<group>"; };
+		F804AC3D1581DFA700AC733C /* led_button_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "led_button_highlighted@2x.png"; path = "LEDjack/images/led_button_highlighted@2x.png"; sourceTree = "<group>"; };
+		F804AC3E1581DFA700AC733C /* led_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = led_button.png; path = LEDjack/images/led_button.png; sourceTree = "<group>"; };
+		F804AC3F1581DFA700AC733C /* led_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "led_button@2x.png"; path = "LEDjack/images/led_button@2x.png"; sourceTree = "<group>"; };
+		F804AC401581DFA700AC733C /* led_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = led_icon.png; path = LEDjack/images/led_icon.png; sourceTree = "<group>"; };
+		F804AC411581DFA700AC733C /* led_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "led_icon@2x.png"; path = "LEDjack/images/led_icon@2x.png"; sourceTree = "<group>"; };
+		F804AC641582C37200AC733C /* LEDjackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDjackController.h; sourceTree = "<group>"; };
+		F804AC651582C37200AC733C /* LEDjackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDjackController.m; sourceTree = "<group>"; };
+		F804AC69158380D700AC733C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F848E93D163E9699001ECE5E /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetector.h; sourceTree = "<group>"; };
+		F848E93E163E9699001ECE5E /* FaceDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetector.m; sourceTree = "<group>"; };
+		F848E941163E96D0001ECE5E /* FaceDetectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectionViewController.h; sourceTree = "<group>"; };
+		F848E944163E9A0D001ECE5E /* FaceDetectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetectionViewController.m; sourceTree = "<group>"; };
+		F848E946163FA9D2001ECE5E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		F848E948163FA9EA001ECE5E /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		F848E94A163FAA2C001ECE5E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F848E94C163FAA57001ECE5E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F848E951163FB83B001ECE5E /* rotatableTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotatableTabBarController.h; sourceTree = "<group>"; };
+		F848E952163FB83B001ECE5E /* rotatableTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rotatableTabBarController.m; sourceTree = "<group>"; };
+		F848E99E1640090E001ECE5E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F848E9CC16400DB3001ECE5E /* libleddrive.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libleddrive.a; sourceTree = "<group>"; };
+		F8B5A7F2159FAFD700A376AF /* facedet_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facedet_icon.png; path = LEDjack/images/facedet_icon.png; sourceTree = "<group>"; };
+		F8B5A7F3159FAFD700A376AF /* facedet_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facedet_icon@2x.png"; path = "LEDjack/images/facedet_icon@2x.png"; sourceTree = "<group>"; };
+		F8D7672D15AA6B3700D5BA0C /* mortor_button_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mortor_button_highlighted.png; path = LEDjack/images/mortor_button_highlighted.png; sourceTree = "<group>"; };
+		F8D7672E15AA6B3700D5BA0C /* mortor_button_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mortor_button_highlighted@2x.png"; path = "LEDjack/images/mortor_button_highlighted@2x.png"; sourceTree = "<group>"; };
+		F8D7672F15AA6B3700D5BA0C /* mortor_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mortor_button.png; path = LEDjack/images/mortor_button.png; sourceTree = "<group>"; };
+		F8D7673015AA6B3700D5BA0C /* mortor_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mortor_button@2x.png"; path = "LEDjack/images/mortor_button@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F804AB41157AF3CF00AC733C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F848E9CD16400DB3001ECE5E /* libleddrive.a in Frameworks */,
+				F848E94D163FAA57001ECE5E /* CoreMedia.framework in Frameworks */,
+				F848E94B163FAA2C001ECE5E /* QuartzCore.framework in Frameworks */,
+				F848E949163FA9EA001ECE5E /* CoreImage.framework in Frameworks */,
+				F848E947163FA9D2001ECE5E /* CoreVideo.framework in Frameworks */,
+				F804ABA5157AF4BA00AC733C /* AudioToolbox.framework in Frameworks */,
+				F804ABA3157AF4B200AC733C /* AVFoundation.framework in Frameworks */,
+				F804AB49157AF3CF00AC733C /* UIKit.framework in Frameworks */,
+				F804AB4B157AF3CF00AC733C /* Foundation.framework in Frameworks */,
+				F804AB4D157AF3CF00AC733C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F804AB39157AF3CE00AC733C = {
+			isa = PBXGroup;
+			children = (
+				F848E9CC16400DB3001ECE5E /* libleddrive.a */,
+				F848E99E1640090E001ECE5E /* Default@2x.png */,
+				F804AC69158380D700AC733C /* Default.png */,
+				F804ABCE157C9D9300AC733C /* LEDjackLib */,
+				F804AB4E157AF3CF00AC733C /* LEDjack */,
+				F804AB47157AF3CF00AC733C /* Frameworks */,
+				F804AB45157AF3CF00AC733C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F804AB45157AF3CF00AC733C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F804AB44157AF3CF00AC733C /* LEDjack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F804AB47157AF3CF00AC733C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F848E94C163FAA57001ECE5E /* CoreMedia.framework */,
+				F848E94A163FAA2C001ECE5E /* QuartzCore.framework */,
+				F848E948163FA9EA001ECE5E /* CoreImage.framework */,
+				F848E946163FA9D2001ECE5E /* CoreVideo.framework */,
+				F804ABA4157AF4BA00AC733C /* AudioToolbox.framework */,
+				F804ABA2157AF4B200AC733C /* AVFoundation.framework */,
+				F804AB48157AF3CF00AC733C /* UIKit.framework */,
+				F804AB4A157AF3CF00AC733C /* Foundation.framework */,
+				F804AB4C157AF3CF00AC733C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F804AB4E157AF3CF00AC733C /* LEDjack */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7673615AA6B4100D5BA0C /* FaceDetController */,
+				F804AC631582C34C00AC733C /* LEDJackController */,
+				F804ABAF157C33BC00AC733C /* LEDController */,
+				F804ABB0157C33C800AC733C /* BrightnessController */,
+				F804ABB1157C33D900AC733C /* FlashController */,
+				F804ABB2157C33E600AC733C /* DoubleLEDController */,
+				F804AB57157AF3CF00AC733C /* AppDelegate.h */,
+				F804AB58157AF3CF00AC733C /* AppDelegate.m */,
+				F804AB5A157AF3CF00AC733C /* MainStoryboard.storyboard */,
+				F804AC2D1581DF7E00AC733C /* images */,
+				F804AB4F157AF3CF00AC733C /* Supporting Files */,
+				F848E951163FB83B001ECE5E /* rotatableTabBarController.h */,
+				F848E952163FB83B001ECE5E /* rotatableTabBarController.m */,
+			);
+			path = LEDjack;
+			sourceTree = "<group>";
+		};
+		F804AB4F157AF3CF00AC733C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F804AB50157AF3CF00AC733C /* LEDjack-Info.plist */,
+				F804AB51157AF3CF00AC733C /* InfoPlist.strings */,
+				F804AB54157AF3CF00AC733C /* main.m */,
+				F804AB56157AF3CF00AC733C /* LEDjack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F804ABAF157C33BC00AC733C /* LEDController */ = {
+			isa = PBXGroup;
+			children = (
+				F804ABB3157C340800AC733C /* LEDViewController.h */,
+				F804ABB4157C340800AC733C /* LEDViewController.m */,
+			);
+			name = LEDController;
+			sourceTree = "<group>";
+		};
+		F804ABB0157C33C800AC733C /* BrightnessController */ = {
+			isa = PBXGroup;
+			children = (
+				F804ABB6157C346E00AC733C /* BrightnessViewController.h */,
+				F804ABB7157C346E00AC733C /* BrightnessViewController.m */,
+			);
+			name = BrightnessController;
+			sourceTree = "<group>";
+		};
+		F804ABB1157C33D900AC733C /* FlashController */ = {
+			isa = PBXGroup;
+			children = (
+				F804ABB9157C4D3D00AC733C /* FlashViewController.h */,
+				F804ABBA157C4D3D00AC733C /* FlashViewController.m */,
+			);
+			name = FlashController;
+			sourceTree = "<group>";
+		};
+		F804ABB2157C33E600AC733C /* DoubleLEDController */ = {
+			isa = PBXGroup;
+			children = (
+				F804ABBC157C4ECA00AC733C /* DoubleLEDViewController.h */,
+				F804ABBD157C4ECA00AC733C /* DoubleLEDViewController.m */,
+			);
+			name = DoubleLEDController;
+			sourceTree = "<group>";
+		};
+		F804ABCE157C9D9300AC733C /* LEDjackLib */ = {
+			isa = PBXGroup;
+			children = (
+				F804AC271580AF6800AC733C /* AudioSocket.h */,
+				F804AC18157DA2A800AC733C /* LEDDiffDriver.h */,
+			);
+			name = LEDjackLib;
+			sourceTree = "<group>";
+		};
+		F804AC2D1581DF7E00AC733C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7672D15AA6B3700D5BA0C /* mortor_button_highlighted.png */,
+				F8D7672E15AA6B3700D5BA0C /* mortor_button_highlighted@2x.png */,
+				F8D7672F15AA6B3700D5BA0C /* mortor_button.png */,
+				F8D7673015AA6B3700D5BA0C /* mortor_button@2x.png */,
+				F8B5A7F2159FAFD700A376AF /* facedet_icon.png */,
+				F8B5A7F3159FAFD700A376AF /* facedet_icon@2x.png */,
+				F804AC2E1581DFA700AC733C /* 2led_icon.png */,
+				F804AC2F1581DFA700AC733C /* 2led_icon@2x.png */,
+				F804AC301581DFA700AC733C /* ballon_bottom.png */,
+				F804AC311581DFA700AC733C /* ballon_bottom@2x.png */,
+				F804AC321581DFA700AC733C /* ballon_left.png */,
+				F804AC331581DFA700AC733C /* ballon_left@2x.png */,
+				F804AC341581DFA700AC733C /* ballon_up.png */,
+				F804AC351581DFA700AC733C /* ballon_up@2x.png */,
+				F804AC361581DFA700AC733C /* brightness_control_icon.png */,
+				F804AC371581DFA700AC733C /* brightness_control_icon@2x.png */,
+				F804AC381581DFA700AC733C /* flash_icon.png */,
+				F804AC391581DFA700AC733C /* flash_icon@2x.png */,
+				F804AC3A1581DFA700AC733C /* icon.png */,
+				F804AC3B1581DFA700AC733C /* icon@2x.png */,
+				F804AC3C1581DFA700AC733C /* led_button_highlighted.png */,
+				F804AC3D1581DFA700AC733C /* led_button_highlighted@2x.png */,
+				F804AC3E1581DFA700AC733C /* led_button.png */,
+				F804AC3F1581DFA700AC733C /* led_button@2x.png */,
+				F804AC401581DFA700AC733C /* led_icon.png */,
+				F804AC411581DFA700AC733C /* led_icon@2x.png */,
+			);
+			name = images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F804AC631582C34C00AC733C /* LEDJackController */ = {
+			isa = PBXGroup;
+			children = (
+				F804AC641582C37200AC733C /* LEDjackController.h */,
+				F804AC651582C37200AC733C /* LEDjackController.m */,
+			);
+			name = LEDJackController;
+			sourceTree = "<group>";
+		};
+		F8D7673615AA6B4100D5BA0C /* FaceDetController */ = {
+			isa = PBXGroup;
+			children = (
+				F848E93D163E9699001ECE5E /* FaceDetector.h */,
+				F848E93E163E9699001ECE5E /* FaceDetector.m */,
+				F848E941163E96D0001ECE5E /* FaceDetectionViewController.h */,
+				F848E944163E9A0D001ECE5E /* FaceDetectionViewController.m */,
+			);
+			name = FaceDetController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F804AB43157AF3CF00AC733C /* LEDjack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F804AB6D157AF3CF00AC733C /* Build configuration list for PBXNativeTarget "LEDjack" */;
+			buildPhases = (
+				F804AB40157AF3CF00AC733C /* Sources */,
+				F804AB41157AF3CF00AC733C /* Frameworks */,
+				F804AB42157AF3CF00AC733C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LEDjack;
+			productName = LEDjack;
+			productReference = F804AB44157AF3CF00AC733C /* LEDjack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F804AB3B157AF3CE00AC733C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "REINFORCE Lab.";
+			};
+			buildConfigurationList = F804AB3E157AF3CE00AC733C /* Build configuration list for PBXProject "LEDjack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F804AB39157AF3CE00AC733C;
+			productRefGroup = F804AB45157AF3CF00AC733C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F804AB43157AF3CF00AC733C /* LEDjack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F804AB42157AF3CF00AC733C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F804AB53157AF3CF00AC733C /* InfoPlist.strings in Resources */,
+				F804AB5C157AF3CF00AC733C /* MainStoryboard.storyboard in Resources */,
+				F804AC421581DFA700AC733C /* 2led_icon.png in Resources */,
+				F804AC431581DFA700AC733C /* 2led_icon@2x.png in Resources */,
+				F804AC441581DFA700AC733C /* ballon_bottom.png in Resources */,
+				F804AC451581DFA700AC733C /* ballon_bottom@2x.png in Resources */,
+				F804AC461581DFA700AC733C /* ballon_left.png in Resources */,
+				F804AC471581DFA700AC733C /* ballon_left@2x.png in Resources */,
+				F804AC481581DFA700AC733C /* ballon_up.png in Resources */,
+				F804AC491581DFA700AC733C /* ballon_up@2x.png in Resources */,
+				F804AC4A1581DFA700AC733C /* brightness_control_icon.png in Resources */,
+				F804AC4B1581DFA700AC733C /* brightness_control_icon@2x.png in Resources */,
+				F804AC4C1581DFA700AC733C /* flash_icon.png in Resources */,
+				F804AC4D1581DFA700AC733C /* flash_icon@2x.png in Resources */,
+				F804AC4E1581DFA700AC733C /* icon.png in Resources */,
+				F804AC4F1581DFA700AC733C /* icon@2x.png in Resources */,
+				F804AC501581DFA700AC733C /* led_button_highlighted.png in Resources */,
+				F804AC511581DFA700AC733C /* led_button_highlighted@2x.png in Resources */,
+				F804AC521581DFA700AC733C /* led_button.png in Resources */,
+				F804AC531581DFA700AC733C /* led_button@2x.png in Resources */,
+				F804AC541581DFA700AC733C /* led_icon.png in Resources */,
+				F804AC551581DFA700AC733C /* led_icon@2x.png in Resources */,
+				F804AC6A158380D700AC733C /* Default.png in Resources */,
+				F8B5A7F4159FAFD700A376AF /* facedet_icon.png in Resources */,
+				F8B5A7F5159FAFD700A376AF /* facedet_icon@2x.png in Resources */,
+				F8D7673115AA6B3700D5BA0C /* mortor_button_highlighted.png in Resources */,
+				F8D7673215AA6B3700D5BA0C /* mortor_button_highlighted@2x.png in Resources */,
+				F8D7673315AA6B3700D5BA0C /* mortor_button.png in Resources */,
+				F8D7673415AA6B3700D5BA0C /* mortor_button@2x.png in Resources */,
+				F848E99F1640090E001ECE5E /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F804AB40157AF3CF00AC733C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F804AB55157AF3CF00AC733C /* main.m in Sources */,
+				F804AB59157AF3CF00AC733C /* AppDelegate.m in Sources */,
+				F804ABB5157C340800AC733C /* LEDViewController.m in Sources */,
+				F804ABB8157C346E00AC733C /* BrightnessViewController.m in Sources */,
+				F804ABBB157C4D3D00AC733C /* FlashViewController.m in Sources */,
+				F804ABBE157C4ECA00AC733C /* DoubleLEDViewController.m in Sources */,
+				F804AC661582C37200AC733C /* LEDjackController.m in Sources */,
+				F848E93F163E9699001ECE5E /* FaceDetector.m in Sources */,
+				F848E945163E9A0D001ECE5E /* FaceDetectionViewController.m in Sources */,
+				F848E953163FB83C001ECE5E /* rotatableTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F804AB51157AF3CF00AC733C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F804AB52157AF3CF00AC733C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F804AB5A157AF3CF00AC733C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F804AB5B157AF3CF00AC733C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F804AB6B157AF3CF00AC733C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../LEDjackLib/**";
+			};
+			name = Debug;
+		};
+		F804AB6C157AF3CF00AC733C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../LEDjackLib/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F804AB6E157AF3CF00AC733C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LEDjack/LEDjack-Prefix.pch";
+				INFOPLIST_FILE = "LEDjack/LEDjack-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = "-lleddrive";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F804AB6F157AF3CF00AC733C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LEDjack/LEDjack-Prefix.pch";
+				INFOPLIST_FILE = "LEDjack/LEDjack-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = "-lleddrive";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F804AB3E157AF3CE00AC733C /* Build configuration list for PBXProject "LEDjack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F804AB6B157AF3CF00AC733C /* Debug */,
+				F804AB6C157AF3CF00AC733C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F804AB6D157AF3CF00AC733C /* Build configuration list for PBXNativeTarget "LEDjack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F804AB6E157AF3CF00AC733C /* Debug */,
+				F804AB6F157AF3CF00AC733C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F804AB3B157AF3CE00AC733C /* Project object */;
+}
