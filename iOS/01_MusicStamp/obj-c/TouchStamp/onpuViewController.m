@@ -16,7 +16,8 @@
 
 // スタンプIDと音ファイル名の定義
 #define NUM_OF_STAMPS 7
-const int  StampIDs[] = {1, 2, 3, 7, 8, 9, 24};
+// なんでドの音のファイル名が"c"ではなく"a"なのかは、音楽の知識がないからなので、スルーしてください
+const int  StampIDs[] = {1, 2, 3, 4, 5, 6, 7};
 const char *StampFileNames[] = {"a", "b", "c", "d", "e", "f", "g"};
 
 @interface onpuViewController () {    
@@ -83,7 +84,32 @@ const char *StampFileNames[] = {"a", "b", "c", "d", "e", "f", "g"};
     } else {
         if(prevStampID_ != info.stampID) {
             prevStampID_ = info.stampID;
-            NSNumber *sid = (NSNumber *)[sounds_ objectForKey:[NSNumber numberWithInt:info.stampID]]; 
+            // ファイル名を検索する
+            // ドとラは、180度回転すると同じパターン。なのでドとラは回転角度で判定する。
+            int i = info.stampID;
+            switch (info.stampID) {
+                case 1: // ドもしくはラ
+                    if(info.angle > 90 && info.angle < 270) {
+                        i = 1; //ド
+                    } else {
+                        i = 6; //ラ
+                    }
+                    break;
+                case 2: // レ
+                    break;
+                case 3: // ミ
+                    break;
+                case 4: // ファ
+                    break;
+                case 5: // ソ
+                    break;
+                case 6: // シ
+                    i = 7;
+                    break;
+                default:
+                    break;
+            }
+            NSNumber *sid = (NSNumber *)[sounds_ objectForKey:[NSNumber numberWithInt:i]]; 
             if(sid != nil) {
                 AudioServicesPlaySystemSound([sid unsignedIntValue]);
             }
