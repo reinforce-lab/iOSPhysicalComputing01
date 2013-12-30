@@ -17,7 +17,7 @@
 @interface touchPointsViewController () {    
     absPatternRecognizer *recognizer_;
     SystemSoundID sid_;
-    int prev_touches_;
+    NSUInteger prev_touches_;
 }
 
 -(int)getUnitLength:(double)lengthInMiliMeter;

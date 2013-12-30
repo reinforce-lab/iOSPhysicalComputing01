@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <tabBarController id="4" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -26,63 +24,31 @@
                         <segue destination="gG4-Mx-tSi" kind="relationship" relationship="viewControllers" id="6PL-y6-r5u"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
         <!--Touch Points View Controller - touch-->
         <scene sceneID="bMs-6i-eKF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="efW-g1-qrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rqU-kn-sLJ" customClass="touchPointsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dAK-LW-WrL"/>
+                        <viewControllerLayoutGuide type="bottom" id="yIA-Og-6c7"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hxt-9f-GZM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchArea.png" id="l5E-Hb-jxu">
-                                <rect key="frame" x="0.0" y="216" width="320" height="215"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchPoints.png" id="X4v-vt-ww6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchPoints.png" translatesAutoresizingMaskIntoConstraints="NO" id="X4v-vt-ww6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <view contentMode="scaleToFill" id="O1f-wX-839" customClass="touchesView">
-                                <rect key="frame" x="0.0" y="216" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="WKM-ki-V47" customClass="touchesView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wg5-f0-Sf1">
-                                        <rect key="frame" x="264" y="12" width="36" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" image="onpu_btn_highlighted.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="selected" image="onpu_btn.png"/>
-                                        <state key="highlighted" image="onpu_btn.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onpu_btn_touchUpInside:" destination="rqU-kn-sLJ" eventType="touchUpInside" id="vnQ-qW-gBs"/>
-                                            <action selector="onput_btn_touchDown:" destination="rqU-kn-sLJ" eventType="touchDown" id="TNG-71-mfD"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="bmF-1Y-ATe">
-                                <rect key="frame" x="29" y="58" width="210" height="137"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmF-1Y-ATe">
+                                <rect key="frame" x="37" y="46" width="250" height="145"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -91,8 +57,59 @@
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1f-wX-839" customClass="touchesView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg5-f0-Sf1">
+                                <rect key="frame" x="264" y="13" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="onpu_btn_highlighted.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="onpu_btn.png"/>
+                                <state key="highlighted" image="onpu_btn.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onpu_btn_touchUpInside:" destination="rqU-kn-sLJ" eventType="touchUpInside" id="vnQ-qW-gBs"/>
+                                    <action selector="onput_btn_touchDown:" destination="rqU-kn-sLJ" eventType="touchDown" id="TNG-71-mfD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchArea.png" translatesAutoresizingMaskIntoConstraints="NO" id="l5E-Hb-jxu">
+                                <rect key="frame" x="0.0" y="216" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKM-ki-V47" customClass="touchesView">
+                                <rect key="frame" x="0.0" y="216" width="320" height="432"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l5E-Hb-jxu" firstAttribute="top" secondItem="X4v-vt-ww6" secondAttribute="bottom" id="4Py-FM-Izy"/>
+                            <constraint firstItem="X4v-vt-ww6" firstAttribute="top" secondItem="dAK-LW-WrL" secondAttribute="bottom" id="AMB-fa-STc"/>
+                            <constraint firstItem="X4v-vt-ww6" firstAttribute="leading" secondItem="bmF-1Y-ATe" secondAttribute="leading" constant="-37" id="CpA-qP-3RT"/>
+                            <constraint firstItem="O1f-wX-839" firstAttribute="leading" secondItem="l5E-Hb-jxu" secondAttribute="leading" id="F7T-AY-QjC"/>
+                            <constraint firstItem="Wg5-f0-Sf1" firstAttribute="top" secondItem="dAK-LW-WrL" secondAttribute="bottom" constant="13" id="Ly1-Pu-OFd"/>
+                            <constraint firstItem="X4v-vt-ww6" firstAttribute="top" secondItem="bmF-1Y-ATe" secondAttribute="top" constant="-46" id="cMy-Fx-1a3"/>
+                            <constraint firstItem="X4v-vt-ww6" firstAttribute="trailing" secondItem="bmF-1Y-ATe" secondAttribute="trailing" constant="33" id="eo8-Fy-0CJ"/>
+                            <constraint firstItem="O1f-wX-839" firstAttribute="bottom" secondItem="X4v-vt-ww6" secondAttribute="bottom" id="fWi-I7-eOG"/>
+                            <constraint firstItem="X4v-vt-ww6" firstAttribute="bottom" secondItem="bmF-1Y-ATe" secondAttribute="bottom" constant="25" id="i0M-Eh-cOJ"/>
+                            <constraint firstItem="X4v-vt-ww6" firstAttribute="leading" secondItem="O1f-wX-839" secondAttribute="leading" id="iQl-Cn-88u"/>
+                            <constraint firstItem="O1f-wX-839" firstAttribute="leading" secondItem="hxt-9f-GZM" secondAttribute="leading" id="jRu-As-hsK"/>
+                            <constraint firstItem="X4v-vt-ww6" firstAttribute="trailing" secondItem="O1f-wX-839" secondAttribute="trailing" id="nPs-x9-7Wf"/>
+                            <constraint firstAttribute="trailing" secondItem="Wg5-f0-Sf1" secondAttribute="trailing" constant="20" symbolic="YES" id="qCc-W1-Nck"/>
+                            <constraint firstAttribute="trailing" secondItem="Wg5-f0-Sf1" secondAttribute="trailing" constant="20" id="u5N-zW-Wk5"/>
+                            <constraint firstItem="O1f-wX-839" firstAttribute="top" secondItem="hxt-9f-GZM" secondAttribute="top" id="zb4-th-mcf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="touch" image="finger.png" id="L7k-Q7-8OP"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -104,54 +121,87 @@
                         <outlet property="touchesView2_" destination="WKM-ki-V47" id="6yw-LA-fJv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efW-g1-qrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-81"/>
+            <point key="canvasLocation" x="653" y="-233"/>
         </scene>
         <!--Onpu View Controller - stamp-->
         <scene sceneID="wfZ-3O-sXx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uWx-CK-Lbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="gG4-Mx-tSi" customClass="onpuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hSF-E8-Z0Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="NQu-s5-HMG"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hCf-H3-hAC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchPoints.png" id="v7O-1l-6CF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchPoints.png" translatesAutoresizingMaskIntoConstraints="NO" id="v7O-1l-6CF">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="B9Q-jk-0HB"/>
+                                    <constraint firstAttribute="height" constant="216" id="UWK-wq-Whz"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchArea.png" id="LWy-yN-Qr2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchArea.png" translatesAutoresizingMaskIntoConstraints="NO" id="LWy-yN-Qr2">
                                 <rect key="frame" x="0.0" y="216" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="ENg-va-sTc"/>
+                                    <constraint firstAttribute="height" constant="216" id="ifB-nC-lFQ"/>
+                                </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" id="xSO-bD-dhT" customClass="onpuView">
-                                <rect key="frame" x="0.0" y="216" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="WFX-zO-muA" customClass="onpuView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSO-bD-dhT" customClass="onpuView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="Mny-NJ-MnQ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFX-zO-muA" customClass="onpuView">
+                                <rect key="frame" x="0.0" y="216" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mny-NJ-MnQ">
                                 <rect key="frame" x="29" y="58" width="210" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES" updatesFrequently="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="23L-h4-gw7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mny-NJ-MnQ" firstAttribute="top" secondItem="hSF-E8-Z0Z" secondAttribute="bottom" constant="58" id="72n-Di-y0R"/>
+                            <constraint firstItem="LWy-yN-Qr2" firstAttribute="trailing" secondItem="WFX-zO-muA" secondAttribute="trailing" id="7o4-zF-dlU"/>
+                            <constraint firstItem="v7O-1l-6CF" firstAttribute="leading" secondItem="xSO-bD-dhT" secondAttribute="leading" id="EHF-xm-vQq"/>
+                            <constraint firstItem="LWy-yN-Qr2" firstAttribute="top" secondItem="v7O-1l-6CF" secondAttribute="bottom" id="EUp-xv-A1H"/>
+                            <constraint firstItem="v7O-1l-6CF" firstAttribute="trailing" secondItem="xSO-bD-dhT" secondAttribute="trailing" id="J8x-4h-c2H"/>
+                            <constraint firstItem="WFX-zO-muA" firstAttribute="leading" secondItem="hCf-H3-hAC" secondAttribute="leading" id="LCu-7I-dLo"/>
+                            <constraint firstItem="v7O-1l-6CF" firstAttribute="bottom" secondItem="xSO-bD-dhT" secondAttribute="bottom" id="R3q-qp-h5t"/>
+                            <constraint firstItem="v7O-1l-6CF" firstAttribute="top" secondItem="xSO-bD-dhT" secondAttribute="top" id="R8U-ND-Vo0"/>
+                            <constraint firstAttribute="trailing" secondItem="Mny-NJ-MnQ" secondAttribute="trailing" constant="81" id="WG0-Ou-hsc"/>
+                            <constraint firstItem="LWy-yN-Qr2" firstAttribute="bottom" secondItem="WFX-zO-muA" secondAttribute="bottom" id="Wlg-oV-qam"/>
+                            <constraint firstItem="Mny-NJ-MnQ" firstAttribute="leading" secondItem="hCf-H3-hAC" secondAttribute="leading" constant="29" id="bIN-8b-Uxq"/>
+                            <constraint firstItem="v7O-1l-6CF" firstAttribute="leading" secondItem="hCf-H3-hAC" secondAttribute="leading" id="biX-Kw-w48"/>
+                            <constraint firstItem="v7O-1l-6CF" firstAttribute="leading" secondItem="xSO-bD-dhT" secondAttribute="leading" id="e7J-Ub-0e6"/>
+                            <constraint firstItem="v7O-1l-6CF" firstAttribute="top" secondItem="hSF-E8-Z0Z" secondAttribute="bottom" id="eNv-o8-wef"/>
+                            <constraint firstItem="LWy-yN-Qr2" firstAttribute="top" secondItem="WFX-zO-muA" secondAttribute="top" id="hNE-oG-59Q"/>
+                            <constraint firstItem="LWy-yN-Qr2" firstAttribute="leading" secondItem="WFX-zO-muA" secondAttribute="leading" id="iSW-w8-nyL"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="stamp" image="onpu.png" id="hfF-Mp-rNj"/>
                     <connections>
@@ -160,33 +210,34 @@
                         <outlet property="touchesView2_" destination="WFX-zO-muA" id="wy8-Ew-iwr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWx-CK-Lbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="-81"/>
+            <point key="canvasLocation" x="653" y="1255"/>
         </scene>
         <!--Measure View Controller - measure-->
         <scene sceneID="bxg-W3-SRh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ioh-Q5-YbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3ih-v1-bqG" customClass="measureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x2N-pd-hkP"/>
+                        <viewControllerLayoutGuide type="bottom" id="rJ6-GF-jst"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fLd-ns-Wnd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchArea.png" id="W2K-3W-kHr">
-                                <rect key="frame" x="0.0" y="216" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchPoints.png" id="l2Q-7u-GrY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchPoints.png" translatesAutoresizingMaskIntoConstraints="NO" id="l2Q-7u-GrY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="WS1-5D-ikv"/>
+                                    <constraint firstAttribute="height" constant="216" id="gxQ-nC-xI3"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Distance: " id="VhT-XB-KbA">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Distance: " translatesAutoresizingMaskIntoConstraints="NO" id="VhT-XB-KbA">
                                 <rect key="frame" x="25" y="157" width="275" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -196,24 +247,57 @@
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" id="OaZ-Is-03i" customClass="measureView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="touchArea.png" translatesAutoresizingMaskIntoConstraints="NO" id="W2K-3W-kHr">
+                                <rect key="frame" x="0.0" y="216" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="iEO-wD-dmG"/>
+                                    <constraint firstAttribute="height" constant="216" id="tHE-w3-t3e"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaZ-Is-03i" customClass="measureView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="EGJ-oZ-152"/>
+                                    <constraint firstAttribute="height" constant="216" id="gmg-U7-XiM"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" id="ZF3-9U-XjN" customClass="measureView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZF3-9U-XjN" customClass="measureView">
                                 <rect key="frame" x="0.0" y="216" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="CwM-2w-1RU"/>
+                                    <constraint firstAttribute="height" constant="216" id="FtT-2w-Oej"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZF3-9U-XjN" firstAttribute="top" secondItem="OaZ-Is-03i" secondAttribute="bottom" id="Cbe-Qk-UAJ"/>
+                            <constraint firstItem="l2Q-7u-GrY" firstAttribute="top" secondItem="x2N-pd-hkP" secondAttribute="bottom" id="DQ6-Dm-14K"/>
+                            <constraint firstItem="OaZ-Is-03i" firstAttribute="leading" secondItem="fLd-ns-Wnd" secondAttribute="leading" id="PTz-wr-fLy"/>
+                            <constraint firstItem="ZF3-9U-XjN" firstAttribute="leading" secondItem="fLd-ns-Wnd" secondAttribute="leading" id="QNG-PZ-Nlz"/>
+                            <constraint firstItem="OaZ-Is-03i" firstAttribute="top" secondItem="x2N-pd-hkP" secondAttribute="bottom" id="Y4l-kM-eAQ"/>
+                            <constraint firstItem="l2Q-7u-GrY" firstAttribute="top" secondItem="VhT-XB-KbA" secondAttribute="top" constant="-157" id="Zi1-3u-yze"/>
+                            <constraint firstItem="l2Q-7u-GrY" firstAttribute="bottom" secondItem="VhT-XB-KbA" secondAttribute="bottom" constant="21" id="jGx-oP-qQy"/>
+                            <constraint firstItem="l2Q-7u-GrY" firstAttribute="leading" secondItem="fLd-ns-Wnd" secondAttribute="leading" id="qHZ-iy-hBq"/>
+                            <constraint firstItem="l2Q-7u-GrY" firstAttribute="leading" secondItem="VhT-XB-KbA" secondAttribute="leading" constant="-25" id="r6b-my-deB"/>
+                            <constraint firstItem="l2Q-7u-GrY" firstAttribute="trailing" secondItem="VhT-XB-KbA" secondAttribute="trailing" constant="20" id="sik-Vk-t4a"/>
+                            <constraint firstItem="W2K-3W-kHr" firstAttribute="leading" secondItem="fLd-ns-Wnd" secondAttribute="leading" id="tzk-4G-4so"/>
+                            <constraint firstItem="W2K-3W-kHr" firstAttribute="top" secondItem="l2Q-7u-GrY" secondAttribute="bottom" id="xn6-Ug-24H"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="measure" image="scale.png" id="X6r-20-W1H"/>
                     <connections>
@@ -222,8 +306,9 @@
                         <outlet property="textView_" destination="VhT-XB-KbA" id="CY5-ZO-9Js"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioh-Q5-YbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="-81"/>
+            <point key="canvasLocation" x="653" y="497"/>
         </scene>
     </scenes>
     <resources>
@@ -235,46 +320,8 @@
         <image name="touchArea.png" width="320" height="216"/>
         <image name="touchPoints.png" width="320" height="216"/>
     </resources>
-    <classes>
-        <class className="measureView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/measureView.h"/>
-        </class>
-        <class className="measureViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/measureViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="measureView1_" candidateClass="measureView"/>
-                <relationship kind="outlet" name="measureView2_" candidateClass="measureView"/>
-                <relationship kind="outlet" name="textView_" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="onpuView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/onpuView.h"/>
-        </class>
-        <class className="onpuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/onpuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="textView_" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="touchesView1_" candidateClass="onpuView"/>
-                <relationship kind="outlet" name="touchesView2_" candidateClass="onpuView"/>
-            </relationships>
-        </class>
-        <class className="touchPointsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/touchPointsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onpu_btn_touchUpInside:"/>
-                <relationship kind="action" name="onput_btn_touchDown:"/>
-                <relationship kind="outlet" name="onpuBtn_" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textView_" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="touchesView1_" candidateClass="touchesView"/>
-                <relationship kind="outlet" name="touchesView2_" candidateClass="touchesView"/>
-            </relationships>
-        </class>
-        <class className="touchesView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/touchesView.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <nil key="statusBar"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>

@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		F8C52582163E07D6009FED2D /* signMarkLib-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F8C52583163E07D6009FED2D /* Build configuration list for PBXAggregateTarget "signMarkLib-Universal" */;
+			buildPhases = (
+				F8C52586163E07E0009FED2D /* ShellScript */,
+				F8C525FB163E1D5A009FED2D /* CopyFiles */,
+			);
+			dependencies = (
+				F8C525FA163E1D0E009FED2D /* PBXTargetDependency */,
+			);
+			name = "signMarkLib-Universal";
+			productName = "signMarkLib-Universal";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		F8C52573163E06B3009FED2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C52572163E06B3009FED2D /* Foundation.framework */; };
+		F8C5258A163E0916009FED2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C52589163E0916009FED2D /* CoreGraphics.framework */; };
+		F8C5258C163E091E009FED2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C5258B163E091E009FED2D /* UIKit.framework */; };
+		F8C52591163E0960009FED2D /* stampIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5258E163E0960009FED2D /* stampIdentifier.m */; };
+		F8C52592163E0960009FED2D /* stampRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C52590163E0960009FED2D /* stampRecognizer.m */; };
+		F8C52597163E0982009FED2D /* keyIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C52594163E0982009FED2D /* keyIdentifier.m */; };
+		F8C52598163E0982009FED2D /* keyRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C52596163E0982009FED2D /* keyRecognizer.m */; };
+		F8C525A9163E0996009FED2D /* absPatternIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5259A163E0996009FED2D /* absPatternIdentifier.m */; };
+		F8C525AA163E0996009FED2D /* absPatternRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5259C163E0996009FED2D /* absPatternRecognizer.m */; };
+		F8C525AB163E0996009FED2D /* clusterVO.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5259E163E0996009FED2D /* clusterVO.m */; };
+		F8C525AC163E0996009FED2D /* stampInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C525A0163E0996009FED2D /* stampInfo.m */; };
+		F8C525AD163E0996009FED2D /* traceDistanceTable.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C525A2163E0996009FED2D /* traceDistanceTable.m */; };
+		F8C525AE163E0996009FED2D /* vector2d.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C525A4163E0996009FED2D /* vector2d.m */; };
+		F8C525AF163E0996009FED2D /* vectorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C525A6163E0996009FED2D /* vectorCode.m */; };
+		F8C525B0163E0996009FED2D /* vectorCodeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C525A8163E0996009FED2D /* vectorCodeSet.m */; };
+		F8C525FC163E1D66009FED2D /* stampIdentifier.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C5258D163E0960009FED2D /* stampIdentifier.h */; };
+		F8C598C6163E438B00547E43 /* stampIdentifier.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C5258D163E0960009FED2D /* stampIdentifier.h */; };
+		F8C598C7163E448700547E43 /* stampRecognizer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C5258F163E0960009FED2D /* stampRecognizer.h */; };
+		F8C598C8163E448B00547E43 /* absPatternIdentifier.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C52599163E0996009FED2D /* absPatternIdentifier.h */; };
+		F8C598C9163E448E00547E43 /* absPatternRecognizer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C5259B163E0996009FED2D /* absPatternRecognizer.h */; };
+		F8C598CA163E449100547E43 /* clusterVO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C5259D163E0996009FED2D /* clusterVO.h */; };
+		F8C598CB163E449400547E43 /* stampInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C5259F163E0996009FED2D /* stampInfo.h */; };
+		F8C598CC163E449800547E43 /* traceDistanceTable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C525A1163E0996009FED2D /* traceDistanceTable.h */; };
+		F8C598CD163E449A00547E43 /* vector2d.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C525A3163E0996009FED2D /* vector2d.h */; };
+		F8C598CE163E449E00547E43 /* vectorCode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C525A5163E0996009FED2D /* vectorCode.h */; };
+		F8C598CF163E44A100547E43 /* vectorCodeSet.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C525A7163E0996009FED2D /* vectorCodeSet.h */; };
+		F8C598D7163E473300547E43 /* keyIdentifier.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C52593163E0982009FED2D /* keyIdentifier.h */; };
+		F8C598D8163E473500547E43 /* keyRecognizer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8C52595163E0982009FED2D /* keyRecognizer.h */; };
+		F8C5995E163E6EBD00547E43 /* stampRecognizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5995D163E6EBD00547E43 /* stampRecognizerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8C525F9163E1D0E009FED2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8C52566163E06B2009FED2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8C5256E163E06B2009FED2D;
+			remoteInfo = signMarkLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F8C5256D163E06B2009FED2D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Headers;
+			dstSubfolderSpec = 16;
+			files = (
+				F8C598C6163E438B00547E43 /* stampIdentifier.h in CopyFiles */,
+				F8C598CB163E449400547E43 /* stampInfo.h in CopyFiles */,
+				F8C598C9163E448E00547E43 /* absPatternRecognizer.h in CopyFiles */,
+				F8C598CF163E44A100547E43 /* vectorCodeSet.h in CopyFiles */,
+				F8C598D8163E473500547E43 /* keyRecognizer.h in CopyFiles */,
+				F8C598CD163E449A00547E43 /* vector2d.h in CopyFiles */,
+				F8C598D7163E473300547E43 /* keyIdentifier.h in CopyFiles */,
+				F8C598CE163E449E00547E43 /* vectorCode.h in CopyFiles */,
+				F8C598CC163E449800547E43 /* traceDistanceTable.h in CopyFiles */,
+				F8C598C8163E448B00547E43 /* absPatternIdentifier.h in CopyFiles */,
+				F8C598CA163E449100547E43 /* clusterVO.h in CopyFiles */,
+				F8C598C7163E448700547E43 /* stampRecognizer.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C525FB163E1D5A009FED2D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Headers;
+			dstSubfolderSpec = 16;
+			files = (
+				F8C525FC163E1D66009FED2D /* stampIdentifier.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F8C5256F163E06B3009FED2D /* libsignMarkLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsignMarkLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C52572163E06B3009FED2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F8C52576163E06B3009FED2D /* signMarkLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "signMarkLib-Prefix.pch"; sourceTree = "<group>"; };
+		F8C52581163E078B009FED2D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C52589163E0916009FED2D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F8C5258B163E091E009FED2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F8C5258D163E0960009FED2D /* stampIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stampIdentifier.h; sourceTree = "<group>"; };
+		F8C5258E163E0960009FED2D /* stampIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stampIdentifier.m; sourceTree = "<group>"; };
+		F8C5258F163E0960009FED2D /* stampRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stampRecognizer.h; sourceTree = "<group>"; };
+		F8C52590163E0960009FED2D /* stampRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stampRecognizer.m; sourceTree = "<group>"; };
+		F8C52593163E0982009FED2D /* keyIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = keyIdentifier.h; path = signMarkLib/keyIdentifier.h; sourceTree = "<group>"; };
+		F8C52594163E0982009FED2D /* keyIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = keyIdentifier.m; path = signMarkLib/keyIdentifier.m; sourceTree = "<group>"; };
+		F8C52595163E0982009FED2D /* keyRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = keyRecognizer.h; path = signMarkLib/keyRecognizer.h; sourceTree = "<group>"; };
+		F8C52596163E0982009FED2D /* keyRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = keyRecognizer.m; path = signMarkLib/keyRecognizer.m; sourceTree = "<group>"; };
+		F8C52599163E0996009FED2D /* absPatternIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = absPatternIdentifier.h; path = signMarkLib/absPatternIdentifier.h; sourceTree = "<group>"; };
+		F8C5259A163E0996009FED2D /* absPatternIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = absPatternIdentifier.m; path = signMarkLib/absPatternIdentifier.m; sourceTree = "<group>"; };
+		F8C5259B163E0996009FED2D /* absPatternRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = absPatternRecognizer.h; path = signMarkLib/absPatternRecognizer.h; sourceTree = "<group>"; };
+		F8C5259C163E0996009FED2D /* absPatternRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = absPatternRecognizer.m; path = signMarkLib/absPatternRecognizer.m; sourceTree = "<group>"; };
+		F8C5259D163E0996009FED2D /* clusterVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clusterVO.h; path = signMarkLib/clusterVO.h; sourceTree = "<group>"; };
+		F8C5259E163E0996009FED2D /* clusterVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = clusterVO.m; path = signMarkLib/clusterVO.m; sourceTree = "<group>"; };
+		F8C5259F163E0996009FED2D /* stampInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stampInfo.h; path = signMarkLib/stampInfo.h; sourceTree = "<group>"; };
+		F8C525A0163E0996009FED2D /* stampInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = stampInfo.m; path = signMarkLib/stampInfo.m; sourceTree = "<group>"; };
+		F8C525A1163E0996009FED2D /* traceDistanceTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = traceDistanceTable.h; path = signMarkLib/traceDistanceTable.h; sourceTree = "<group>"; };
+		F8C525A2163E0996009FED2D /* traceDistanceTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = traceDistanceTable.m; path = signMarkLib/traceDistanceTable.m; sourceTree = "<group>"; };
+		F8C525A3163E0996009FED2D /* vector2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vector2d.h; path = signMarkLib/vector2d.h; sourceTree = "<group>"; };
+		F8C525A4163E0996009FED2D /* vector2d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = vector2d.m; path = signMarkLib/vector2d.m; sourceTree = "<group>"; };
+		F8C525A5163E0996009FED2D /* vectorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vectorCode.h; path = signMarkLib/vectorCode.h; sourceTree = "<group>"; };
+		F8C525A6163E0996009FED2D /* vectorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = vectorCode.m; path = signMarkLib/vectorCode.m; sourceTree = "<group>"; };
+		F8C525A7163E0996009FED2D /* vectorCodeSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vectorCodeSet.h; path = signMarkLib/vectorCodeSet.h; sourceTree = "<group>"; };
+		F8C525A8163E0996009FED2D /* vectorCodeSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = vectorCodeSet.m; path = signMarkLib/vectorCodeSet.m; sourceTree = "<group>"; };
+		F8C5995C163E6EBD00547E43 /* stampRecognizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stampRecognizerViewController.h; path = signMarkLib/stampRecognizerViewController.h; sourceTree = "<group>"; };
+		F8C5995D163E6EBD00547E43 /* stampRecognizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = stampRecognizerViewController.m; path = signMarkLib/stampRecognizerViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8C5256C163E06B2009FED2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C5258C163E091E009FED2D /* UIKit.framework in Frameworks */,
+				F8C5258A163E0916009FED2D /* CoreGraphics.framework in Frameworks */,
+				F8C52573163E06B3009FED2D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8C52564163E06B2009FED2D = {
+			isa = PBXGroup;
+			children = (
+				F8C5995A163E6D3400547E43 /* wrapper */,
+				F8C52574163E06B3009FED2D /* signMarkLib */,
+				F8C52587163E08CF009FED2D /* keyMarkLib */,
+				F8C52588163E08E4009FED2D /* markLib */,
+				F8C52580163E0778009FED2D /* Resources */,
+				F8C52575163E06B3009FED2D /* Supporting Files */,
+				F8C52571163E06B3009FED2D /* Frameworks */,
+				F8C52570163E06B3009FED2D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8C52570163E06B3009FED2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8C5256F163E06B3009FED2D /* libsignMarkLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8C52571163E06B3009FED2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8C5258B163E091E009FED2D /* UIKit.framework */,
+				F8C52589163E0916009FED2D /* CoreGraphics.framework */,
+				F8C52572163E06B3009FED2D /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8C52574163E06B3009FED2D /* signMarkLib */ = {
+			isa = PBXGroup;
+			children = (
+				F8C5258D163E0960009FED2D /* stampIdentifier.h */,
+				F8C5258E163E0960009FED2D /* stampIdentifier.m */,
+				F8C5258F163E0960009FED2D /* stampRecognizer.h */,
+				F8C52590163E0960009FED2D /* stampRecognizer.m */,
+			);
+			path = signMarkLib;
+			sourceTree = "<group>";
+		};
+		F8C52575163E06B3009FED2D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8C52576163E06B3009FED2D /* signMarkLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = signMarkLib;
+			sourceTree = "<group>";
+		};
+		F8C52580163E0778009FED2D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8C52581163E078B009FED2D /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F8C52587163E08CF009FED2D /* keyMarkLib */ = {
+			isa = PBXGroup;
+			children = (
+				F8C52593163E0982009FED2D /* keyIdentifier.h */,
+				F8C52594163E0982009FED2D /* keyIdentifier.m */,
+				F8C52595163E0982009FED2D /* keyRecognizer.h */,
+				F8C52596163E0982009FED2D /* keyRecognizer.m */,
+			);
+			name = keyMarkLib;
+			sourceTree = "<group>";
+		};
+		F8C52588163E08E4009FED2D /* markLib */ = {
+			isa = PBXGroup;
+			children = (
+				F8C52599163E0996009FED2D /* absPatternIdentifier.h */,
+				F8C5259A163E0996009FED2D /* absPatternIdentifier.m */,
+				F8C5259B163E0996009FED2D /* absPatternRecognizer.h */,
+				F8C5259C163E0996009FED2D /* absPatternRecognizer.m */,
+				F8C5259D163E0996009FED2D /* clusterVO.h */,
+				F8C5259E163E0996009FED2D /* clusterVO.m */,
+				F8C5259F163E0996009FED2D /* stampInfo.h */,
+				F8C525A0163E0996009FED2D /* stampInfo.m */,
+				F8C525A1163E0996009FED2D /* traceDistanceTable.h */,
+				F8C525A2163E0996009FED2D /* traceDistanceTable.m */,
+				F8C525A3163E0996009FED2D /* vector2d.h */,
+				F8C525A4163E0996009FED2D /* vector2d.m */,
+				F8C525A5163E0996009FED2D /* vectorCode.h */,
+				F8C525A6163E0996009FED2D /* vectorCode.m */,
+				F8C525A7163E0996009FED2D /* vectorCodeSet.h */,
+				F8C525A8163E0996009FED2D /* vectorCodeSet.m */,
+			);
+			name = markLib;
+			sourceTree = "<group>";
+		};
+		F8C5995A163E6D3400547E43 /* wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				F8C5995C163E6EBD00547E43 /* stampRecognizerViewController.h */,
+				F8C5995D163E6EBD00547E43 /* stampRecognizerViewController.m */,
+			);
+			name = wrapper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8C5256E163E06B2009FED2D /* signMarkLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C5257D163E06B3009FED2D /* Build configuration list for PBXNativeTarget "signMarkLib" */;
+			buildPhases = (
+				F8C5256B163E06B2009FED2D /* Sources */,
+				F8C5256C163E06B2009FED2D /* Frameworks */,
+				F8C5256D163E06B2009FED2D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = signMarkLib;
+			productName = signMarkLib;
+			productReference = F8C5256F163E06B3009FED2D /* libsignMarkLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8C52566163E06B2009FED2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Akihiro Uehara";
+			};
+			buildConfigurationList = F8C52569163E06B2009FED2D /* Build configuration list for PBXProject "signMarkLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F8C52564163E06B2009FED2D;
+			productRefGroup = F8C52570163E06B3009FED2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8C5256E163E06B2009FED2D /* signMarkLib */,
+				F8C52582163E07D6009FED2D /* signMarkLib-Universal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F8C52586163E07E0009FED2D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Environment Variables\nFRAMEWORK_NAME=${PROJECT_NAME}\nFRAMEWORK_VERSION=A\nFRAMEWORK_VERSION_NUMBER=1.0\nFRAMEWORK_BUILD_PATH=\"${SRCROOT}/build/${CONFIGURATION}-framework\"\nFRAMEWORK_DIR=\"${FRAMEWORK_BUILD_PATH}/${FRAMEWORK_NAME}.framework\"\nFRAMEWORK_PACKAGE_NAME=\"${FRAMEWORK_NAME}.${FRAMEWORK_VERSION_NUMBER}.zip\"\n\n# Clean directories\nrm -rf \"${FRAMEWORK_BUILD_PATH}\"\n\n# Build simulator and device binaries.\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -sdk iphonesimulator${IPHONEOS_DEPLOYMENT_TARGET} -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} clean build\n# xcodebuild -project ${PROJECT_NAME}.xcodeproj -sdk iphoneos${IPHONEOS_DEPLOYMENT_TARGET} -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} clean build\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -sdk iphoneos${IPHONEOS_DEPLOYMENT_TARGET} -target \"${PROJECT_NAME}\" -arch \"armv7 armv7s\" -configuration ${CONFIGURATION} clean build\n\n# create framework directories.\nmkdir -p ${FRAMEWORK_DIR}\nmkdir -p ${FRAMEWORK_DIR}/Versions\nmkdir -p ${FRAMEWORK_DIR}/Versions/${FRAMEWORK_VERSION}\nmkdir -p ${FRAMEWORK_DIR}/Versions/${FRAMEWORK_VERSION}/Resources\nmkdir -p ${FRAMEWORK_DIR}/Versions/${FRAMEWORK_VERSION}/Headers\n\n# create symlinks\nln -s ${FRAMEWORK_DIR}/Versions/${FRAMEWORK_VERSION} ${FRAMEWORK_DIR}/Versions/Current\nln -s ${FRAMEWORK_DIR}/Versions/Current/Headers ${FRAMEWORK_DIR}/Headers\nln -s ${FRAMEWORK_DIR}/Versions/Current/Resources ${FRAMEWORK_DIR}/Resources\nln -s ${FRAMEWORK_DIR}/Versions/Current/${FRAMEWORK_NAME} ${FRAMEWORK_DIR}/${FRAMEWORK_NAME}\n\n# create the universal library\nlipo ${SRCROOT}/build/${CONFIGURATION}-iphoneos/lib${FRAMEWORK_NAME}.a ${SRCROOT}/build/${CONFIGURATION}-iphonesimulator/lib${FRAMEWORK_NAME}.a -create -output \"${FRAMEWORK_DIR}/Versions/Current/${FRAMEWORK_NAME}\"\n\n# copy files\ncp ${SRCROOT}/build/${CONFIGURATION}-iphoneos/Headers/*.h ${FRAMEWORK_DIR}/Headers/\ncp Info.plist ${FRAMEWORK_DIR}/Resources\n                                                      \n# zip (配布用に TestFramework.framework ディレクトリをZIP圧縮するだけなので、配布しないなら以下はコメントアウトしてもよい)\ncd ${FRAMEWORK_BUILD_PATH}\nzip -ry ${FRAMEWORK_PACKAGE_NAME} $(basename $FRAMEWORK_DIR)";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8C5256B163E06B2009FED2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C52591163E0960009FED2D /* stampIdentifier.m in Sources */,
+				F8C52592163E0960009FED2D /* stampRecognizer.m in Sources */,
+				F8C52597163E0982009FED2D /* keyIdentifier.m in Sources */,
+				F8C52598163E0982009FED2D /* keyRecognizer.m in Sources */,
+				F8C525A9163E0996009FED2D /* absPatternIdentifier.m in Sources */,
+				F8C525AA163E0996009FED2D /* absPatternRecognizer.m in Sources */,
+				F8C525AB163E0996009FED2D /* clusterVO.m in Sources */,
+				F8C525AC163E0996009FED2D /* stampInfo.m in Sources */,
+				F8C525AD163E0996009FED2D /* traceDistanceTable.m in Sources */,
+				F8C525AE163E0996009FED2D /* vector2d.m in Sources */,
+				F8C525AF163E0996009FED2D /* vectorCode.m in Sources */,
+				F8C525B0163E0996009FED2D /* vectorCodeSet.m in Sources */,
+				F8C5995E163E6EBD00547E43 /* stampRecognizerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8C525FA163E1D0E009FED2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8C5256E163E06B2009FED2D /* signMarkLib */;
+			targetProxy = F8C525F9163E1D0E009FED2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F8C5257B163E06B3009FED2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PUBLIC_HEADERS_FOLDER_PATH = /Headers;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F8C5257C163E06B3009FED2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PUBLIC_HEADERS_FOLDER_PATH = /Headers;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8C5257E163E06B3009FED2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/signMarkLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "signMarkLib/signMarkLib-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /Headers;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F8C5257F163E06B3009FED2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/signMarkLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "signMarkLib/signMarkLib-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /Headers;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F8C52584163E07D6009FED2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F8C52585163E07D6009FED2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8C52569163E06B2009FED2D /* Build configuration list for PBXProject "signMarkLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C5257B163E06B3009FED2D /* Debug */,
+				F8C5257C163E06B3009FED2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C5257D163E06B3009FED2D /* Build configuration list for PBXNativeTarget "signMarkLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C5257E163E06B3009FED2D /* Debug */,
+				F8C5257F163E06B3009FED2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C52583163E07D6009FED2D /* Build configuration list for PBXAggregateTarget "signMarkLib-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C52584163E07D6009FED2D /* Debug */,
+				F8C52585163E07D6009FED2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8C52566163E06B2009FED2D /* Project object */;
+}

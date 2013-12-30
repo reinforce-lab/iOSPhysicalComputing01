@@ -22,6 +22,8 @@
 		F87D7214157618D600AF3AB1 /* measureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F87D7213157618D600AF3AB1 /* measureView.m */; };
 		F87D722A1576FA4A00AF3AB1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87D72291576FA4A00AF3AB1 /* AudioToolbox.framework */; };
 		F87D722C1576FA4F00AF3AB1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87D722B1576FA4F00AF3AB1 /* AVFoundation.framework */; };
+		F891935818716831009690FA /* libsignMarkLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F89193551871676A009690FA /* libsignMarkLib.a */; };
+		F891935A187168B4009690FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8919359187168B4009690FA /* Images.xcassets */; };
 		F8C598E9163E530F00547E43 /* a.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E1163E530F00547E43 /* a.aif */; };
 		F8C598EA163E530F00547E43 /* b.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E2163E530F00547E43 /* b.aif */; };
 		F8C598EB163E530F00547E43 /* c.aif in Resources */ = {isa = PBXBuildFile; fileRef = F8C598E3163E530F00547E43 /* c.aif */; };
@@ -48,9 +50,24 @@
 		F8C59912163E532300547E43 /* touchArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C59900163E532300547E43 /* touchArea@2x.png */; };
 		F8C59913163E532300547E43 /* touchPoints.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C59901163E532300547E43 /* touchPoints.png */; };
 		F8C59914163E532300547E43 /* touchPoints@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C59902163E532300547E43 /* touchPoints@2x.png */; };
-		F8C59991163E78C100547E43 /* signMarkLib in Resources */ = {isa = PBXBuildFile; fileRef = F8C59990163E78C100547E43 /* signMarkLib */; };
-		F8C59993163E791300547E43 /* libsignMarkLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C59992163E791300547E43 /* libsignMarkLib.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F89193541871676A009690FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F891934F1871676A009690FA /* signMarkLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8C5256F163E06B3009FED2D;
+			remoteInfo = signMarkLib;
+		};
+		F891935618716809009690FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F891934F1871676A009690FA /* signMarkLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8C5256E163E06B2009FED2D;
+			remoteInfo = signMarkLib;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F8032DB515785703007A8061 /* onpuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = onpuView.h; sourceTree = "<group>"; };
@@ -78,6 +95,8 @@
 		F87D7213157618D600AF3AB1 /* measureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = measureView.m; sourceTree = "<group>"; };
 		F87D72291576FA4A00AF3AB1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F87D722B1576FA4F00AF3AB1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F891934F1871676A009690FA /* signMarkLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = signMarkLib.xcodeproj; path = ../../lib/signMarkLib/signMarkLib.xcodeproj; sourceTree = "<group>"; };
+		F8919359187168B4009690FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MusicStamp/Images.xcassets; sourceTree = "<group>"; };
 		F8C598E1163E530F00547E43 /* a.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = a.aif; path = sounds/a.aif; sourceTree = "<group>"; };
 		F8C598E2163E530F00547E43 /* b.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = b.aif; path = sounds/b.aif; sourceTree = "<group>"; };
 		F8C598E3163E530F00547E43 /* c.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = c.aif; path = sounds/c.aif; sourceTree = "<group>"; };
@@ -104,8 +123,6 @@
 		F8C59900163E532300547E43 /* touchArea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "touchArea@2x.png"; path = "images/touchArea@2x.png"; sourceTree = "<group>"; };
 		F8C59901163E532300547E43 /* touchPoints.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = touchPoints.png; path = images/touchPoints.png; sourceTree = "<group>"; };
 		F8C59902163E532300547E43 /* touchPoints@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "touchPoints@2x.png"; path = "images/touchPoints@2x.png"; sourceTree = "<group>"; };
-		F8C59990163E78C100547E43 /* signMarkLib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = signMarkLib; sourceTree = "<group>"; };
-		F8C59992163E791300547E43 /* libsignMarkLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsignMarkLib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8C59993163E791300547E43 /* libsignMarkLib.a in Frameworks */,
+				F891935818716831009690FA /* libsignMarkLib.a in Frameworks */,
 				F87D722C1576FA4F00AF3AB1 /* AVFoundation.framework in Frameworks */,
 				F87D722A1576FA4A00AF3AB1 /* AudioToolbox.framework in Frameworks */,
 				F81D9880156FB942005058CA /* UIKit.framework in Frameworks */,
@@ -128,8 +145,8 @@
 		F81D9870156FB941005058CA = {
 			isa = PBXGroup;
 			children = (
-				F8C59992163E791300547E43 /* libsignMarkLib.a */,
-				F8C59990163E78C100547E43 /* signMarkLib */,
+				F891934F1871676A009690FA /* signMarkLib.xcodeproj */,
+				F8919359187168B4009690FA /* Images.xcassets */,
 				F87D7216157667BB00AF3AB1 /* sounds */,
 				F81D98A7156FB958005058CA /* images */,
 				F81D9885156FB942005058CA /* TouchStamp */,
@@ -256,6 +273,14 @@
 			name = sounds;
 			sourceTree = "<group>";
 		};
+		F89193501871676A009690FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F89193551871676A009690FA /* libsignMarkLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,6 +295,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F891935718716809009690FA /* PBXTargetDependency */,
 			);
 			name = MusicStamp;
 			productName = TouchStamp;
@@ -295,12 +321,28 @@
 			mainGroup = F81D9870156FB941005058CA;
 			productRefGroup = F81D987C156FB942005058CA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F89193501871676A009690FA /* Products */;
+					ProjectRef = F891934F1871676A009690FA /* signMarkLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F81D987A156FB942005058CA /* MusicStamp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F89193551871676A009690FA /* libsignMarkLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsignMarkLib.a;
+			remoteRef = F89193541871676A009690FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F81D9879156FB942005058CA /* Resources */ = {
@@ -333,9 +375,9 @@
 				F8C59910163E532300547E43 /* scale@2x.png in Resources */,
 				F8C59911163E532300547E43 /* touchArea.png in Resources */,
 				F8C59912163E532300547E43 /* touchArea@2x.png in Resources */,
+				F891935A187168B4009690FA /* Images.xcassets in Resources */,
 				F8C59913163E532300547E43 /* touchPoints.png in Resources */,
 				F8C59914163E532300547E43 /* touchPoints@2x.png in Resources */,
-				F8C59991163E78C100547E43 /* signMarkLib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +400,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F891935718716809009690FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = signMarkLib;
+			targetProxy = F891935618716809009690FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F81D9888156FB942005058CA /* InfoPlist.strings */ = {
@@ -383,14 +433,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -400,7 +450,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -411,17 +461,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -433,21 +483,24 @@
 		F81D98A5156FB942005058CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "TouchStamp/MusicStamp-Prefix.pch";
 				INFOPLIST_FILE = "TouchStamp/MusicStamp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				OTHER_LDFLAGS = "-lsignMarkLib";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = MusicStamp;
-				USER_HEADER_SEARCH_PATHS = "../../../**";
+				USER_HEADER_SEARCH_PATHS = ../../lib/signMarkLib/signMarkLib/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -455,21 +508,24 @@
 		F81D98A6156FB942005058CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "TouchStamp/MusicStamp-Prefix.pch";
 				INFOPLIST_FILE = "TouchStamp/MusicStamp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				OTHER_LDFLAGS = "-lsignMarkLib";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = MusicStamp;
-				USER_HEADER_SEARCH_PATHS = "../../../**";
+				USER_HEADER_SEARCH_PATHS = ../../lib/signMarkLib/signMarkLib/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
