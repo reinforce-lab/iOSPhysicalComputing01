@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 
 //オーディオインタフェースの基底クラスです。
@@ -32,7 +33,7 @@
 // interface to Audio buffer
 @protocol AudioBufferDelegate
 @optional
--(void)demodulate:(UInt32)length buf:(AudioUnitSampleType *)buf;
+//-(void)demodulate:(UInt32)length buf:(AudioUnitSampleType *)buf;
 -(void)modulate:(UInt32)length leftBuf:(AudioUnitSampleType *)leftBuf rightBuf:(AudioUnitSampleType *)rightBuf;
 @end
 
@@ -41,7 +42,6 @@
 // ユーザの設定音量。音量制限がONになっている場合は、その制限範囲での最大値
 @property(nonatomic, assign, readonly) float outputVolume;
 @property(nonatomic, assign, readonly) BOOL  isJackIn;
-@property(nonatomic, assign, readonly) BOOL  isMicAvailable;
 @property(nonatomic, assign, readonly) BOOL  isInterrupted;
 
 @property(nonatomic, assign, readonly) BOOL isRunning;

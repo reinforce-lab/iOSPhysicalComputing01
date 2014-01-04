@@ -74,7 +74,7 @@
     [super viewDidAppear:animated];
     
     // show warning dialog
-    AppDelegate *dlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    AppDelegate *dlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 -(void)viewWillDisappear:(BOOL)animated

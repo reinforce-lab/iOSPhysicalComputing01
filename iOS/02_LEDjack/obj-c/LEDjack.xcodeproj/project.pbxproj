@@ -32,8 +32,6 @@
 		F804AC4B1581DFA700AC733C /* brightness_control_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC371581DFA700AC733C /* brightness_control_icon@2x.png */; };
 		F804AC4C1581DFA700AC733C /* flash_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC381581DFA700AC733C /* flash_icon.png */; };
 		F804AC4D1581DFA700AC733C /* flash_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC391581DFA700AC733C /* flash_icon@2x.png */; };
-		F804AC4E1581DFA700AC733C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3A1581DFA700AC733C /* icon.png */; };
-		F804AC4F1581DFA700AC733C /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3B1581DFA700AC733C /* icon@2x.png */; };
 		F804AC501581DFA700AC733C /* led_button_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3C1581DFA700AC733C /* led_button_highlighted.png */; };
 		F804AC511581DFA700AC733C /* led_button_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3D1581DFA700AC733C /* led_button_highlighted@2x.png */; };
 		F804AC521581DFA700AC733C /* led_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC3E1581DFA700AC733C /* led_button.png */; };
@@ -41,7 +39,6 @@
 		F804AC541581DFA700AC733C /* led_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC401581DFA700AC733C /* led_icon.png */; };
 		F804AC551581DFA700AC733C /* led_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC411581DFA700AC733C /* led_icon@2x.png */; };
 		F804AC661582C37200AC733C /* LEDjackController.m in Sources */ = {isa = PBXBuildFile; fileRef = F804AC651582C37200AC733C /* LEDjackController.m */; };
-		F804AC6A158380D700AC733C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F804AC69158380D700AC733C /* Default.png */; };
 		F848E93F163E9699001ECE5E /* FaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = F848E93E163E9699001ECE5E /* FaceDetector.m */; };
 		F848E945163E9A0D001ECE5E /* FaceDetectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F848E944163E9A0D001ECE5E /* FaceDetectionViewController.m */; };
 		F848E947163FA9D2001ECE5E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F848E946163FA9D2001ECE5E /* CoreVideo.framework */; };
@@ -49,15 +46,33 @@
 		F848E94B163FAA2C001ECE5E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F848E94A163FAA2C001ECE5E /* QuartzCore.framework */; };
 		F848E94D163FAA57001ECE5E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F848E94C163FAA57001ECE5E /* CoreMedia.framework */; };
 		F848E953163FB83C001ECE5E /* rotatableTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F848E952163FB83B001ECE5E /* rotatableTabBarController.m */; };
-		F848E99F1640090E001ECE5E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F848E99E1640090E001ECE5E /* Default@2x.png */; };
-		F848E9CD16400DB3001ECE5E /* libleddrive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F848E9CC16400DB3001ECE5E /* libleddrive.a */; };
+		F891936318725DB8009690FA /* libleddrive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F891936018725D04009690FA /* libleddrive.a */; };
 		F8B5A7F4159FAFD700A376AF /* facedet_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B5A7F2159FAFD700A376AF /* facedet_icon.png */; };
 		F8B5A7F5159FAFD700A376AF /* facedet_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B5A7F3159FAFD700A376AF /* facedet_icon@2x.png */; };
 		F8D7673115AA6B3700D5BA0C /* mortor_button_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D7672D15AA6B3700D5BA0C /* mortor_button_highlighted.png */; };
 		F8D7673215AA6B3700D5BA0C /* mortor_button_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D7672E15AA6B3700D5BA0C /* mortor_button_highlighted@2x.png */; };
 		F8D7673315AA6B3700D5BA0C /* mortor_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D7672F15AA6B3700D5BA0C /* mortor_button.png */; };
 		F8D7673415AA6B3700D5BA0C /* mortor_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D7673015AA6B3700D5BA0C /* mortor_button@2x.png */; };
+		F8FDF3901877D48D00BF675E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8FDF38F1877D48D00BF675E /* Images.xcassets */; };
+		F8FDF3921877D5AA00BF675E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8FDF3911877D5AA00BF675E /* icon@2x.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F891935F18725D04009690FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F891935B18725D03009690FA /* leddrive.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F848E9AB16400C0B001ECE5E;
+			remoteInfo = leddrive;
+		};
+		F891936118725DB0009690FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F891935B18725D03009690FA /* leddrive.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F848E9AA16400C0B001ECE5E;
+			remoteInfo = leddrive;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F804AB44157AF3CF00AC733C /* LEDjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEDjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,8 +96,6 @@
 		F804ABBA157C4D3D00AC733C /* FlashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewController.m; sourceTree = "<group>"; };
 		F804ABBC157C4ECA00AC733C /* DoubleLEDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleLEDViewController.h; sourceTree = "<group>"; };
 		F804ABBD157C4ECA00AC733C /* DoubleLEDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleLEDViewController.m; sourceTree = "<group>"; };
-		F804AC18157DA2A800AC733C /* LEDDiffDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDDiffDriver.h; path = LEDjackLib/LEDDiffDriver.h; sourceTree = "<group>"; };
-		F804AC271580AF6800AC733C /* AudioSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioSocket.h; path = LEDjackLib/AudioSocket.h; sourceTree = "<group>"; };
 		F804AC2E1581DFA700AC733C /* 2led_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2led_icon.png; path = LEDjack/images/2led_icon.png; sourceTree = "<group>"; };
 		F804AC2F1581DFA700AC733C /* 2led_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "2led_icon@2x.png"; path = "LEDjack/images/2led_icon@2x.png"; sourceTree = "<group>"; };
 		F804AC301581DFA700AC733C /* ballon_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ballon_bottom.png; path = LEDjack/images/ballon_bottom.png; sourceTree = "<group>"; };
@@ -95,8 +108,6 @@
 		F804AC371581DFA700AC733C /* brightness_control_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "brightness_control_icon@2x.png"; path = "LEDjack/images/brightness_control_icon@2x.png"; sourceTree = "<group>"; };
 		F804AC381581DFA700AC733C /* flash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flash_icon.png; path = LEDjack/images/flash_icon.png; sourceTree = "<group>"; };
 		F804AC391581DFA700AC733C /* flash_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flash_icon@2x.png"; path = "LEDjack/images/flash_icon@2x.png"; sourceTree = "<group>"; };
-		F804AC3A1581DFA700AC733C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = LEDjack/images/icon.png; sourceTree = "<group>"; };
-		F804AC3B1581DFA700AC733C /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "LEDjack/images/icon@2x.png"; sourceTree = "<group>"; };
 		F804AC3C1581DFA700AC733C /* led_button_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = led_button_highlighted.png; path = LEDjack/images/led_button_highlighted.png; sourceTree = "<group>"; };
 		F804AC3D1581DFA700AC733C /* led_button_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "led_button_highlighted@2x.png"; path = "LEDjack/images/led_button_highlighted@2x.png"; sourceTree = "<group>"; };
 		F804AC3E1581DFA700AC733C /* led_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = led_button.png; path = LEDjack/images/led_button.png; sourceTree = "<group>"; };
@@ -105,7 +116,6 @@
 		F804AC411581DFA700AC733C /* led_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "led_icon@2x.png"; path = "LEDjack/images/led_icon@2x.png"; sourceTree = "<group>"; };
 		F804AC641582C37200AC733C /* LEDjackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDjackController.h; sourceTree = "<group>"; };
 		F804AC651582C37200AC733C /* LEDjackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDjackController.m; sourceTree = "<group>"; };
-		F804AC69158380D700AC733C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F848E93D163E9699001ECE5E /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetector.h; sourceTree = "<group>"; };
 		F848E93E163E9699001ECE5E /* FaceDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetector.m; sourceTree = "<group>"; };
 		F848E941163E96D0001ECE5E /* FaceDetectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectionViewController.h; sourceTree = "<group>"; };
@@ -116,14 +126,15 @@
 		F848E94C163FAA57001ECE5E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		F848E951163FB83B001ECE5E /* rotatableTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotatableTabBarController.h; sourceTree = "<group>"; };
 		F848E952163FB83B001ECE5E /* rotatableTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rotatableTabBarController.m; sourceTree = "<group>"; };
-		F848E99E1640090E001ECE5E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		F848E9CC16400DB3001ECE5E /* libleddrive.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libleddrive.a; sourceTree = "<group>"; };
+		F891935B18725D03009690FA /* leddrive.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = leddrive.xcodeproj; path = ../../lib/leddrive/leddrive.xcodeproj; sourceTree = "<group>"; };
 		F8B5A7F2159FAFD700A376AF /* facedet_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facedet_icon.png; path = LEDjack/images/facedet_icon.png; sourceTree = "<group>"; };
 		F8B5A7F3159FAFD700A376AF /* facedet_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facedet_icon@2x.png"; path = "LEDjack/images/facedet_icon@2x.png"; sourceTree = "<group>"; };
 		F8D7672D15AA6B3700D5BA0C /* mortor_button_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mortor_button_highlighted.png; path = LEDjack/images/mortor_button_highlighted.png; sourceTree = "<group>"; };
 		F8D7672E15AA6B3700D5BA0C /* mortor_button_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mortor_button_highlighted@2x.png"; path = "LEDjack/images/mortor_button_highlighted@2x.png"; sourceTree = "<group>"; };
 		F8D7672F15AA6B3700D5BA0C /* mortor_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mortor_button.png; path = LEDjack/images/mortor_button.png; sourceTree = "<group>"; };
 		F8D7673015AA6B3700D5BA0C /* mortor_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mortor_button@2x.png"; path = "LEDjack/images/mortor_button@2x.png"; sourceTree = "<group>"; };
+		F8FDF38F1877D48D00BF675E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LEDjack/Images.xcassets; sourceTree = "<group>"; };
+		F8FDF3911877D5AA00BF675E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "LEDjack/images/icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F848E9CD16400DB3001ECE5E /* libleddrive.a in Frameworks */,
+				F891936318725DB8009690FA /* libleddrive.a in Frameworks */,
 				F848E94D163FAA57001ECE5E /* CoreMedia.framework in Frameworks */,
 				F848E94B163FAA2C001ECE5E /* QuartzCore.framework in Frameworks */,
 				F848E949163FA9EA001ECE5E /* CoreImage.framework in Frameworks */,
@@ -150,10 +161,8 @@
 		F804AB39157AF3CE00AC733C = {
 			isa = PBXGroup;
 			children = (
-				F848E9CC16400DB3001ECE5E /* libleddrive.a */,
-				F848E99E1640090E001ECE5E /* Default@2x.png */,
-				F804AC69158380D700AC733C /* Default.png */,
-				F804ABCE157C9D9300AC733C /* LEDjackLib */,
+				F8FDF38F1877D48D00BF675E /* Images.xcassets */,
+				F891935B18725D03009690FA /* leddrive.xcodeproj */,
 				F804AB4E157AF3CF00AC733C /* LEDjack */,
 				F804AB47157AF3CF00AC733C /* Frameworks */,
 				F804AB45157AF3CF00AC733C /* Products */,
@@ -251,18 +260,10 @@
 			name = DoubleLEDController;
 			sourceTree = "<group>";
 		};
-		F804ABCE157C9D9300AC733C /* LEDjackLib */ = {
-			isa = PBXGroup;
-			children = (
-				F804AC271580AF6800AC733C /* AudioSocket.h */,
-				F804AC18157DA2A800AC733C /* LEDDiffDriver.h */,
-			);
-			name = LEDjackLib;
-			sourceTree = "<group>";
-		};
 		F804AC2D1581DF7E00AC733C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F8FDF3911877D5AA00BF675E /* icon@2x.png */,
 				F8D7672D15AA6B3700D5BA0C /* mortor_button_highlighted.png */,
 				F8D7672E15AA6B3700D5BA0C /* mortor_button_highlighted@2x.png */,
 				F8D7672F15AA6B3700D5BA0C /* mortor_button.png */,
@@ -281,8 +282,6 @@
 				F804AC371581DFA700AC733C /* brightness_control_icon@2x.png */,
 				F804AC381581DFA700AC733C /* flash_icon.png */,
 				F804AC391581DFA700AC733C /* flash_icon@2x.png */,
-				F804AC3A1581DFA700AC733C /* icon.png */,
-				F804AC3B1581DFA700AC733C /* icon@2x.png */,
 				F804AC3C1581DFA700AC733C /* led_button_highlighted.png */,
 				F804AC3D1581DFA700AC733C /* led_button_highlighted@2x.png */,
 				F804AC3E1581DFA700AC733C /* led_button.png */,
@@ -301,6 +300,14 @@
 				F804AC651582C37200AC733C /* LEDjackController.m */,
 			);
 			name = LEDJackController;
+			sourceTree = "<group>";
+		};
+		F891935C18725D03009690FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F891936018725D04009690FA /* libleddrive.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F8D7673615AA6B4100D5BA0C /* FaceDetController */ = {
@@ -328,6 +335,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F891936218725DB0009690FA /* PBXTargetDependency */,
 			);
 			name = LEDjack;
 			productName = LEDjack;
@@ -340,7 +348,7 @@
 		F804AB3B157AF3CE00AC733C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "REINFORCE Lab.";
 			};
 			buildConfigurationList = F804AB3E157AF3CE00AC733C /* Build configuration list for PBXProject "LEDjack" */;
@@ -353,12 +361,28 @@
 			mainGroup = F804AB39157AF3CE00AC733C;
 			productRefGroup = F804AB45157AF3CF00AC733C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F891935C18725D03009690FA /* Products */;
+					ProjectRef = F891935B18725D03009690FA /* leddrive.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F804AB43157AF3CF00AC733C /* LEDjack */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F891936018725D04009690FA /* libleddrive.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libleddrive.a;
+			remoteRef = F891935F18725D04009690FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F804AB42157AF3CF00AC733C /* Resources */ = {
@@ -370,6 +394,7 @@
 				F804AC421581DFA700AC733C /* 2led_icon.png in Resources */,
 				F804AC431581DFA700AC733C /* 2led_icon@2x.png in Resources */,
 				F804AC441581DFA700AC733C /* ballon_bottom.png in Resources */,
+				F8FDF3901877D48D00BF675E /* Images.xcassets in Resources */,
 				F804AC451581DFA700AC733C /* ballon_bottom@2x.png in Resources */,
 				F804AC461581DFA700AC733C /* ballon_left.png in Resources */,
 				F804AC471581DFA700AC733C /* ballon_left@2x.png in Resources */,
@@ -379,22 +404,19 @@
 				F804AC4B1581DFA700AC733C /* brightness_control_icon@2x.png in Resources */,
 				F804AC4C1581DFA700AC733C /* flash_icon.png in Resources */,
 				F804AC4D1581DFA700AC733C /* flash_icon@2x.png in Resources */,
-				F804AC4E1581DFA700AC733C /* icon.png in Resources */,
-				F804AC4F1581DFA700AC733C /* icon@2x.png in Resources */,
 				F804AC501581DFA700AC733C /* led_button_highlighted.png in Resources */,
 				F804AC511581DFA700AC733C /* led_button_highlighted@2x.png in Resources */,
 				F804AC521581DFA700AC733C /* led_button.png in Resources */,
 				F804AC531581DFA700AC733C /* led_button@2x.png in Resources */,
 				F804AC541581DFA700AC733C /* led_icon.png in Resources */,
 				F804AC551581DFA700AC733C /* led_icon@2x.png in Resources */,
-				F804AC6A158380D700AC733C /* Default.png in Resources */,
 				F8B5A7F4159FAFD700A376AF /* facedet_icon.png in Resources */,
 				F8B5A7F5159FAFD700A376AF /* facedet_icon@2x.png in Resources */,
 				F8D7673115AA6B3700D5BA0C /* mortor_button_highlighted.png in Resources */,
 				F8D7673215AA6B3700D5BA0C /* mortor_button_highlighted@2x.png in Resources */,
 				F8D7673315AA6B3700D5BA0C /* mortor_button.png in Resources */,
 				F8D7673415AA6B3700D5BA0C /* mortor_button@2x.png in Resources */,
-				F848E99F1640090E001ECE5E /* Default@2x.png in Resources */,
+				F8FDF3921877D5AA00BF675E /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +442,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F891936218725DB0009690FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = leddrive;
+			targetProxy = F891936118725DB0009690FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F804AB51157AF3CF00AC733C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -443,12 +473,11 @@
 		F804AB6B157AF3CF00AC733C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -457,37 +486,37 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "../LEDjackLib/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		F804AB6C157AF3CF00AC733C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "../LEDjackLib/**";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -495,17 +524,20 @@
 		F804AB6E157AF3CF00AC733C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LEDjack/LEDjack-Prefix.pch";
 				INFOPLIST_FILE = "LEDjack/LEDjack-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				OTHER_LDFLAGS = "-lleddrive";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = ../../lib/leddrive/leddrive/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -513,17 +545,20 @@
 		F804AB6F157AF3CF00AC733C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LEDjack/LEDjack-Prefix.pch";
 				INFOPLIST_FILE = "LEDjack/LEDjack-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				OTHER_LDFLAGS = "-lleddrive";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = ../../lib/leddrive/leddrive/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

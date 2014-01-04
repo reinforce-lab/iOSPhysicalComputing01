@@ -26,14 +26,13 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.faceDetector = [[FaceDetector alloc] initWithView:(UIView *)self.preview];
-    self.faceDetector.delegate = self;
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 
+    self.faceDetector = [[FaceDetector alloc] initWithView:(UIView *)self.preview];
+    self.faceDetector.delegate = self;
 }
 
 -(void)viewDidAppear:(BOOL)animated
