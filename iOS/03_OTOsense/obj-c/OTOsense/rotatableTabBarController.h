@@ -1,9 +1,9 @@
 //
 //  rotatableTabBarController.h
-//  LEDjack
+//  OTOsense
 //
-//  Created by Akihiro Uehara on 2012/10/30.
-//  Copyright (c) 2012年 REINFORCE Lab. All rights reserved.
+//  Created by uehara akihiro on 2014/01/05.
+//  Copyright (c) 2014年 REINFORCE Lab. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

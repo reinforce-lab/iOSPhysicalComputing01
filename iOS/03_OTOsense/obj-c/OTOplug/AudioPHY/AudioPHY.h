@@ -12,8 +12,8 @@
 // Audio physical interface class
 @interface AudioPHY : NSObject 
 
-@property(unsafe_unretained, nonatomic) id<AudioPHYDelegate> delegate;
-@property(unsafe_unretained, nonatomic) id<SWMModem> modem;
+@property(weak, nonatomic) id<AudioPHYDelegate> delegate;
+@property(weak, nonatomic) id<SWMModem> modem;
 
 @property(nonatomic, readonly) float outputVolume;
 @property(nonatomic, readonly) BOOL  isHeadsetIn;

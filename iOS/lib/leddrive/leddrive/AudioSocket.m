@@ -121,11 +121,13 @@ static OSStatus renderCallback(void * inRefCon,
     [self updateRouteStatus];
 }
 -(void)mediaServicesWereLostNotification:(NSNotification *)notification {
+    _session = [AVAudioSession sharedInstance];
     [self prepareAudioSession:_bufferSize];
     [self addSessionObservers];
     [self prepareAudioUnit];
 }
 -(void)mediaServicesWereResetNotification:(NSNotification *)notification {
+    _session = [AVAudioSession sharedInstance];
     [self prepareAudioSession:_bufferSize];
     [self addSessionObservers];
     [self prepareAudioUnit];

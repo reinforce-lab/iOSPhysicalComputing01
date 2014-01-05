@@ -11,27 +11,20 @@
 #import <CoreImage/CoreImage.h>
 
 @interface FaceDetector() {
-    NSArray *features_;
-    UIView *previewView_;
-    AVCaptureSession *session_;
-    AVCaptureVideoPreviewLayer *preview_;
-    AVCaptureVideoDataOutput *videoOutput_;
-    CIDetector *faceDetector_;
-    CALayer *layer_;
+    NSArray *_features;
+    UIView *_preview;
+    AVCaptureSession *_captureSession;
+    AVCaptureVideoPreviewLayer *_previewLayer;
+    AVCaptureVideoDataOutput *_videoOutput;
+    CIDetector *_faceDetector;
+    CALayer *_layer;
     
-    int imageOrientation_;
+    int _imageOrientation;
 }
-
 @property (assign, nonatomic) BOOL isCameraAvailable;
-
-- (void)initVideoSession;
-- (void)didRotate:(NSNotification*)notification;
-- (void)updateDeviceRotation:(UIDeviceOrientation)orientation;
 @end
 
 @implementation FaceDetector
-@synthesize isCameraAvailable;
-@synthesize delegate;
 #pragma mark - constructor
 -(id)initWithView:(UIView *)preview
 {
@@ -39,28 +32,28 @@
     if(self) {
         [self initVideoSession];
         
-        previewView_ = preview;
-        faceDetector_ = [CIDetector
+        _preview = preview;
+        _faceDetector = [CIDetector
                          detectorOfType:CIDetectorTypeFace context:nil
                          options:[NSDictionary dictionaryWithObject:CIDetectorAccuracyLow forKey:CIDetectorAccuracy]];
         
         //    CIDetector* detector = [CIDetector detectorOfType:CIDetectorTypeFace
         //                            context:nil options:[NSDictionary dictionaryWithObject:CIDetectorAccuracyHigh forKey:CIDetectorAccuracy]];
         // adding camera preview layer
-        preview_ = [AVCaptureVideoPreviewLayer layerWithSession:session_];
-        preview_.frame = previewView_.bounds;
-        [previewView_.layer addSublayer:preview_];
+        _previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:_captureSession];
+        _previewLayer.frame = _preview.bounds;
+        [_preview.layer addSublayer:_previewLayer];
         
         // add sublayer
-        layer_ = [CALayer layer];
-        layer_.delegate = self;
-        layer_.frame = previewView_.bounds;
-        layer_.contentsScale = [[UIScreen mainScreen] scale];
-        [previewView_.layer addSublayer:layer_];
-        
+        _layer = [CALayer layer];
+        _layer.delegate = self;
+        _layer.frame = _preview.bounds;
+        _layer.contentsScale = [[UIScreen mainScreen] scale];
+        [_preview.layer addSublayer:_layer];
         
         // 回転方向通知、登録
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:UIDeviceOrientationDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter]
+         addObserver:self selector:@selector(didRotate:) name:UIDeviceOrientationDidChangeNotification object:nil];
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     }
     return self;
@@ -71,12 +64,7 @@
     
     // 回転方向通知、登録削除
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    previewView_ = nil;
-    session_     = nil;
-    preview_     = nil;
-    videoOutput_ = nil;
-    layer_       = nil;
+    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
 }
 
 #pragma mark - Private methods
@@ -98,22 +86,27 @@
      8 Left, bottom
      */
     AVCaptureVideoOrientation videoOrietantion;
-    imageOrientation_ = 1;
+    _imageOrientation = 1;
     switch (orientation) {
         case UIDeviceOrientationPortraitUpsideDown:
             videoOrietantion = AVCaptureVideoOrientationPortraitUpsideDown;
-            
             break;
             
         case UIDeviceOrientationPortrait:
         default:
             videoOrietantion = AVCaptureVideoOrientationPortrait;
-            
             break;
     }
+    AVCaptureConnection *videoConnectin;
     
-    [preview_ setOrientation:videoOrietantion];
-    AVCaptureConnection *videoConnectin = [videoOutput_ connectionWithMediaType:AVMediaTypeVideo];
+    // previewの表示向きを更新
+    videoConnectin = _previewLayer.connection;
+    if([videoConnectin isVideoOrientationSupported]) {
+        [videoConnectin setVideoOrientation:videoOrietantion] ;
+    }
+    
+    // 顔認識のソース画像の向きを更新
+    videoConnectin = [_videoOutput connectionWithMediaType:AVMediaTypeVideo];
     if([videoConnectin isVideoOrientationSupported]) {
         [videoConnectin setVideoOrientation:videoOrietantion] ;
     }
@@ -122,9 +115,9 @@
 - (void)initVideoSession {
     NSError *error;
     
-    session_ = [AVCaptureSession new];
-    [session_ beginConfiguration];
-    session_.sessionPreset = AVCaptureSessionPreset640x480;
+    _captureSession = [AVCaptureSession new];
+    [_captureSession beginConfiguration];
+    _captureSession.sessionPreset = AVCaptureSessionPreset640x480;
     //    session_.sessionPreset = AVCaptureSessionPresetHigh;
     
     // setting up vidoe input
@@ -142,23 +135,22 @@
     if(error) {
         NSLog(@"Video input device initialization error. %s, %@",__func__, error);
     }
-    [session_ addInput:videoInput];
+    [_captureSession addInput:videoInput];
     
     // setting up video output
-    videoOutput_ = [[AVCaptureVideoDataOutput alloc] init];
+    _videoOutput = [[AVCaptureVideoDataOutput alloc] init];
     // Specify the pixel format
-    videoOutput_.videoSettings = [NSDictionary dictionaryWithObject:
+    _videoOutput.videoSettings = [NSDictionary dictionaryWithObject:
                                   [NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey];
     
     // queue for sample buffer callback
     dispatch_queue_t queue = dispatch_queue_create("videoqueue", DISPATCH_QUEUE_SERIAL);
-    [videoOutput_ setSampleBufferDelegate:self queue:queue];
+    [_videoOutput setSampleBufferDelegate:self queue:queue];
     
-    dispatch_release(queue);
-    videoOutput_.alwaysDiscardsLateVideoFrames = YES; // allow dropping a frame when its disposing time ups, default is YES
-    [session_ addOutput:videoOutput_];
+    _videoOutput.alwaysDiscardsLateVideoFrames = YES; // allow dropping a frame when its disposing time ups, default is YES
+    [_captureSession addOutput:_videoOutput];
     
-    [session_ commitConfiguration];
+    [_captureSession commitConfiguration];
 }
 
 -(void)start
@@ -166,7 +158,7 @@
     if(! self.isCameraAvailable) return;
     
     // starting video session (starting preview)
-    [session_ startRunning];
+    [_captureSession startRunning];
     
     // updating an orientation of the preview layer
     int64_t delayInSeconds = 0.1;
@@ -180,7 +172,7 @@
 {
     if(! self.isCameraAvailable) return;
     
-    [session_ stopRunning];
+    [_captureSession stopRunning];
 }
 #pragma mark - Private methods
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
@@ -190,12 +182,12 @@
     // 描画領域のクリア
 	CGContextSetRGBFillColor(ctx,   1.0, 1.0, 1.0, 0.0); // fill clear
 	CGContextSetRGBStrokeColor(ctx, 1.0, 1.0, 1.0, 0.0); // stroke transparent
-	CGContextFillRect(ctx, previewView_.bounds);
+	CGContextFillRect(ctx, _preview.bounds);
     
     // 領域の描画
     CGContextSetRGBStrokeColor(ctx, 0, 1.0, 0, 0.8); // stroke green
     CGContextSetLineWidth(ctx, 4);
-    for(CIFaceFeature *feature in features_) {
+    for(CIFaceFeature *feature in _features) {
         // 座標変換
         // 顔検出は、640x480 (ホームボタンを右に見て、第1象限。画面縦方向に640)
         // 画面表示領域は、320x411 (UIKitの座標系)
@@ -213,28 +205,11 @@
     
     CGContextRestoreGState(ctx);
 }
-/*
- - (void)awakeFromNib
- {
- <b style="color:black;background-color:#ffff66">CALayer</b>* layer = [<b style="color:black;background-color:#ffff66">CALayer</b> layer];
- layer.delegate = self;
- layer.bounds = [self bounds];
- layer.needsDisplayOnBoundsChange = YES; // リサイズ時に再<b style="color:black;background-color:#a0ffff">描画</b>する
- [layer setNeedsDisplay];
- [self setLayer:layer];
- [self setWantsLayer:YES];
- }
- 
- - (void)drawLayer:(<b style="color:black;background-color:#ffff66">CALayer</b> *)layer inContext:(CGContextRef)context
- {
- CGContextSetRGBFillColor(context, 1.0f, 0.0f, 0.0f, 1.0f);
- rect = CGRectInset([self bounds], 40, 40);
- CGContextFillRect(context, rect);
- }*/
+
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
-    BOOL isVideoFrame = (captureOutput == (AVCaptureOutput *)videoOutput_);
+    BOOL isVideoFrame = (captureOutput == (AVCaptureOutput *)_videoOutput);
     
     if(isVideoFrame)
     {
@@ -251,9 +226,9 @@
         //[self.context presentRenderbuffer:GL_RENDERBUFFER];
         
         // face detection
-        NSArray *features = [faceDetector_
+        NSArray *features = [_faceDetector
                              featuresInImage:image
-                             options:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:imageOrientation_] forKey:CIDetectorImageOrientation]];
+                             options:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:_imageOrientation] forKey:CIDetectorImageOrientation]];
         
         // 座標変換
         NSMutableArray *ary = [[NSMutableArray alloc] initWithCapacity:10];
@@ -269,8 +244,8 @@
         
         // invoke delegate
         dispatch_async(dispatch_get_main_queue(), ^{
-            features_ = features;
-            [layer_ setNeedsDisplay];
+            _features = features;
+            [_layer setNeedsDisplay];
             [self.delegate detectionUpdated:ary];
         });
     }

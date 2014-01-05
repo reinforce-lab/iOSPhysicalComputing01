@@ -63,10 +63,6 @@
     }
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
 #pragma mark - OTOplugDelegate methods
 // bytes are available to be read (user can call read:)
 -(void)readBytesAvailable:(int)length{}

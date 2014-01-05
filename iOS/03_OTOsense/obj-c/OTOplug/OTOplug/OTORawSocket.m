@@ -12,11 +12,6 @@
 #import "AudioPHY.h"
 #include "math.h"
 
-@interface OTORawSocket()
--(void)onReceivePacket;
--(void)onSendBufferEmpty;
-@end
-
 @implementation OTORawSocket
 @synthesize delegate = delegate_;
 @synthesize audioPHY;
@@ -75,7 +70,7 @@
         memcpy(buf, rcvBuf_, len);
         rcvSize_ -= len;
     }
-    return  len;
+    return  (int)len;
 }
 -(void)flush
 {

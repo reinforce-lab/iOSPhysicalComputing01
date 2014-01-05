@@ -30,17 +30,12 @@
 	// Do any additional setup after loading the view.
     [self loadHelpPage];
 }
-
-- (void)viewDidUnload
-{
-    [self setWebView:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+-(BOOL)shouldAutorotate{
+    return YES;
 }
 
 #pragma mark - Private pages
