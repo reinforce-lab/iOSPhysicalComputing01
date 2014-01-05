@@ -10,11 +10,9 @@
 
 @implementation rotatableTabBarController
 -(BOOL)shouldAutorotate {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
     return YES;
 }
 - (NSUInteger)supportedInterfaceOrientations {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
     return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
 }
 @end
