@@ -12,7 +12,6 @@
 #import "clusterVO.h"
 
 #define MARK_SIZE 24
-#define DY 216
 
 @implementation onpuView {    
     absPatternRecognizer *recognizer_;
@@ -32,6 +31,17 @@
 #pragma mark -
 -(void)drawRect:(CGRect)rect
 {
+    // measure viewを上下に2つ置いている。
+    // 下のViewはframeの原点を引き算するだけでよいが、上のViewはさらにViewの高さも引き算しないとだめ。
+    // 2つを区別するのにフレームのy座標が240を超えているかどうかで切り分ける。
+    CGFloat dy = 0;
+    if( self.frame.origin.y < 240 ) { // 上のView
+        dy = self.frame.origin.y + self.frame.size.height;
+    } else { // 下のView
+        dy = self.frame.origin.y;
+        
+    }
+    
 	// 描画領域のクリア
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
     
@@ -46,7 +56,7 @@
      CGContextSetLineWidth(ctx, 4);
      for(clusterVO *cluster in recognizer_.clusters) {		
      		CGRect r = cluster.circumscribeRect;
-     		rect = CGRectMake(r.origin.x, r.origin.y -DY, r.size.width, r.size.height);
+     		rect = CGRectMake(r.origin.x, r.origin.y -dy, r.size.width, r.size.height);
      		CGContextStrokeRect(ctx, rect);		
      CGContextStrokeRect(ctx, cluster.circumscribeRect);
      }
@@ -56,7 +66,7 @@
 	for(vector2d *pt in recognizer_.touches) {
         //		rect = CGRectMake(xscale_ * pt.x -MARK_SIZE/2, yscale_ * pt.y -MARK_SIZE/2, MARK_SIZE, MARK_SIZE);
         //		CGContextFillRect(ctx, rect);        
-		rect = CGRectMake(pt.x -MARK_SIZE/2, pt.y -MARK_SIZE/2 -DY, MARK_SIZE, MARK_SIZE);
+		rect = CGRectMake(pt.x -MARK_SIZE/2, pt.y -MARK_SIZE/2 -dy, MARK_SIZE, MARK_SIZE);
         CGContextFillRect(ctx, rect);        
 	}
 }

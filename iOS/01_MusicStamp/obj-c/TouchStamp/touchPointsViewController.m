@@ -102,12 +102,15 @@
         }
         prev_touches_ = [recognizer_.touches count];
         // 座標表示
+        // dy は2つのビューの境界のy座標
+        int dy = touchesView2_.frame.origin.y + touchesView2_.frame.size.height;
+        
         NSMutableString *msg = [[NSMutableString alloc] initWithCapacity:100];
         [msg appendString:@"Touch points:\n"];
         for(int i = 0; i < [recognizer_.touches count]; i++) {
             vector2d *vec = [recognizer_.touches objectAtIndex:i];
-            if(vec.y >= 216 ) { // MAGIC WORD 216は、下半分のViewのY座標。上半分のViewのタッチは表示しない
-                [msg appendFormat:@"\t%d:(%3d, %-3d)\n", i, (int)vec.x, (int)vec.y - 216];
+            if(vec.y >= dy ) { // MAGIC WORD 216は、下半分のViewのY座標。上半分のViewのタッチは表示しない
+                [msg appendFormat:@"\t%d:(%3d, %-3d)\n", i, (int)vec.x, (int)vec.y - dy];
             }
         }
         textView_.text = msg;
