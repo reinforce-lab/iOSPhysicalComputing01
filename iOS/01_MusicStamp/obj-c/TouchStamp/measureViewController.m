@@ -10,6 +10,7 @@
 #import "stampRecognizer.h"
 #import "keyRecognizer.h"
 #import "stampInfo.h"
+#import <sys/utsname.h>
 
 @interface measureViewController () {    
     absPatternRecognizer *recognizer_;
@@ -64,9 +65,23 @@
 }
 
 #pragma mark -
+// モデル名を取得する
+-(NSString*)getDeviceName
+{
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    
+    return [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+}
 -(int)getUnitLength:(double)lengthInMiliMeter
 {
     float ppi = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 132.0f : 163.0f;
+
+    NSString* deviceName = [self getDeviceName];
+    if( [deviceName hasPrefix:@"iPhone7,1"] || [deviceName hasPrefix:@"iPhone8,2"] ) { // iPhone6plus , iPhone6s plus
+        ppi = 401 / 2;
+    }
+
     return (int)((ppi / 25.4f) * lengthInMiliMeter);
 }
 
