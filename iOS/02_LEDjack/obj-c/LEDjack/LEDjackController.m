@@ -84,20 +84,6 @@
     [ledDriver removeObserver:self forKeyPath:@"isDrive"];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (   interfaceOrientation == UIInterfaceOrientationPortrait
-            || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
-}
--(NSUInteger)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskPortrait;
-}
--(BOOL)shouldAutorotate
-{
-    return YES;
-}
-
 #pragma mark - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {

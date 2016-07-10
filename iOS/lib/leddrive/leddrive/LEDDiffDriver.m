@@ -15,8 +15,8 @@
     bool isWarningShown_;
     int wrtPos_;    
     int bufLen_;
-    AudioUnitSampleType *lchBuf_;
-    AudioUnitSampleType *rchBuf_;
+    Float32 *lchBuf_;
+    Float32 *rchBuf_;
 }
 
 // properties enabed to write in this class
@@ -110,12 +110,12 @@
 {    
     @synchronized(self) {
         // zero clear
-        memset(lchBuf_, 0, sizeof(AudioUnitSampleType) * bufLen_);
-        memset(rchBuf_, 0, sizeof(AudioUnitSampleType) * bufLen_);
+        memset(lchBuf_, 0, sizeof(Float32) * bufLen_);
+        memset(rchBuf_, 0, sizeof(Float32) * bufLen_);
     
         // set 1st LED
-        AudioUnitSampleType pamp = (AudioUnitSampleType)(led1Amplitude * (float)((1 << kAudioUnitSampleFractionBits) ));
-        AudioUnitSampleType mamp = -1 * pamp;
+        Float32 pamp = led1Amplitude;
+        Float32 mamp = -1 * pamp;
     
         const int s = samplesForPulse;
         int d = led1OnDuration;
@@ -128,7 +128,7 @@
         }
     
         // set 2nd LED
-        pamp = -1 * (AudioUnitSampleType)(led2Amplitude * (float)((1 << kAudioUnitSampleFractionBits) ));
+        pamp = -1 * led2Amplitude;
         mamp = -1 * pamp;
         
         d = led2OnDuration;
@@ -188,8 +188,8 @@
         
         wrtPos_ = 0;
         bufLen_ = 2 * samplesForPulse * burstDuration;
-        lchBuf_ = calloc(bufLen_, sizeof(AudioUnitSampleType));
-        rchBuf_ = calloc(bufLen_, sizeof(AudioUnitSampleType));
+        lchBuf_ = calloc(bufLen_, sizeof(Float32));
+        rchBuf_ = calloc(bufLen_, sizeof(Float32));
     }
 }
 -(void)setAmplitude:(float)a1 led2Amplitude:(float)a2
@@ -219,9 +219,9 @@
 
 
 #pragma mark - AudioBufferDelegate
--(void)demodulate:(UInt32)length buf:(AudioUnitSampleType *)buf
+-(void)demodulate:(UInt32)length buf:(Float32 *)buf
 {}
--(void)modulate:(UInt32)length leftBuf:(AudioUnitSampleType *)leftBuf rightBuf:(AudioUnitSampleType *)rightBuf
+-(void)modulate:(UInt32)length leftBuf:(Float32 *)leftBuf rightBuf:(Float32 *)rightBuf
 {
 //    NSLog(@"modulate isDriving:%d", self.isDriving);    
     if(self.isDriving) {
@@ -233,8 +233,8 @@
             }            
         }
     } else {
-        memset(leftBuf,  0, sizeof(AudioUnitSampleType) * length);
-        memset(rightBuf, 0, sizeof(AudioUnitSampleType) * length);        
+        memset(leftBuf,  0, sizeof(Float32) * length);
+        memset(rightBuf, 0, sizeof(Float32) * length);
     }
 }
 @end

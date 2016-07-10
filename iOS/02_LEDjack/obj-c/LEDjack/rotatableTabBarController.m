@@ -35,20 +35,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - rotatable view controller
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (   interfaceOrientation == UIInterfaceOrientationPortrait
-            || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
-}
--(NSUInteger)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
-}
--(BOOL)shouldAutorotate
-{
-    return YES;
-}
-
-
 @end

@@ -34,7 +34,7 @@
 @protocol AudioBufferDelegate
 @optional
 //-(void)demodulate:(UInt32)length buf:(AudioUnitSampleType *)buf;
--(void)modulate:(UInt32)length leftBuf:(AudioUnitSampleType *)leftBuf rightBuf:(AudioUnitSampleType *)rightBuf;
+-(void)modulate:(UInt32)length leftBuf:(Float32 *)leftBuf rightBuf:(Float32 *)rightBuf;
 @end
 
 @interface AudioSocket : NSObject<AudioBufferDelegate, AudioPHYDelegate>

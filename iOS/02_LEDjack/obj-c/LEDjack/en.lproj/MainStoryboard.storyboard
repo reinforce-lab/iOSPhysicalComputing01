@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Rotatable Tab Bar Controller-->
@@ -24,9 +25,9 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="180"/>
+            <point key="canvasLocation" x="247.5" y="190.14084507042253"/>
         </scene>
-        <!--Flash View Controller - Flash-->
+        <!--Flash-->
         <scene sceneID="Fdp-y8-6KI">
             <objects>
                 <viewController id="Vsa-Gh-Mxy" customClass="FlashViewController" sceneMemberID="viewController">
@@ -35,12 +36,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rC7-LV-sSF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ocn-o2-hvg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt1-Wx-5Uv">
-                                <rect key="frame" x="100" y="20" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="240" y="20" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="1A2-nl-byd"/>
                                     <constraint firstAttribute="height" constant="120" id="Alg-ZU-yWc"/>
@@ -60,8 +60,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OFF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="h2K-PB-mQ2">
-                                <rect key="frame" x="100" y="132" width="120" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="240" y="132" width="120" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="Gdz-NS-ntE"/>
                                     <constraint firstAttribute="width" constant="120" id="vra-bU-zBZ"/>
@@ -72,10 +71,9 @@
                             </label>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5h-5z-9lu">
                                 <rect key="frame" x="46" y="312" width="240" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <string key="text">注意!
@@ -84,17 +82,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="BXd-77-QjZ">
-                                <rect key="frame" x="41" y="205" width="254" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="41" y="205" width="254" height="31"/>
                                 <connections>
                                     <action selector="flashFreqSlidebarValueChanged:" destination="Vsa-Gh-Mxy" eventType="valueChanged" id="eMU-Pb-gV9"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="周波数:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2my-4s-llX">
                                 <rect key="frame" x="20" y="176" width="141" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -102,9 +98,8 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="K1N-o7-HTF">
                                 <rect key="frame" x="176" y="176" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -112,26 +107,23 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Hz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="E58-Pr-6Pe">
                                 <rect key="frame" x="227" y="176" width="61" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.10000000000000001" maxValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6xM-Us-Cs2">
-                                <rect key="frame" x="41" y="270" width="254" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="41" y="270" width="254" height="31"/>
                                 <connections>
                                     <action selector="dutySlidebarValueChanged:" destination="Vsa-Gh-Mxy" eventType="valueChanged" id="2lP-Kr-dZt"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Duty比:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lI9-ud-oaG">
                                 <rect key="frame" x="20" y="253" width="141" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -139,9 +131,8 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="0.5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kFZ-u7-DLA">
                                 <rect key="frame" x="176" y="253" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -149,7 +140,6 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ballon_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="yJz-AM-4sm">
                                 <rect key="frame" x="0.0" y="20" width="158" height="120"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="0A5-Za-j7J"/>
                                     <constraint firstAttribute="width" constant="158" id="g4p-En-xah"/>
@@ -157,7 +147,6 @@
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="音量を最大にしてください。" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="107" translatesAutoresizingMaskIntoConstraints="NO" id="NTj-lq-FJf">
                                 <rect key="frame" x="41" y="47" width="107" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -188,9 +177,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lf7-O2-q1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805" y="880"/>
+            <point key="canvasLocation" x="1509.375" y="929.5774647887323"/>
         </scene>
-        <!--Face Detection View Controller - Face det.-->
+        <!--Face det.-->
         <scene sceneID="s3I-rP-xwf">
             <objects>
                 <viewController id="Mst-0T-9yp" customClass="FaceDetectionViewController" sceneMemberID="viewController">
@@ -199,36 +188,15 @@
                         <viewControllerLayoutGuide type="bottom" id="Z9d-2N-Ffh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BaY-Vr-1x3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-iT-aGn">
-                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ballon_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="60J-gp-zH5">
-                                <rect key="frame" x="0.0" y="20" width="158" height="120"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="T39-pf-vjT"/>
-                                    <constraint firstAttribute="width" constant="158" id="nmh-J3-c2Y"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="音量を最大にしてください。" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="107" translatesAutoresizingMaskIntoConstraints="NO" id="FAU-U4-KZx">
-                                <rect key="frame" x="41" y="47" width="107" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="Yqy-LD-afb"/>
-                                    <constraint firstAttribute="width" constant="107" id="u5b-h5-3ER"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="座標:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-d2-CsY">
                                 <rect key="frame" x="8" y="32" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="xUA-Te-4Zx"/>
                                     <constraint firstAttribute="width" constant="42" id="zYr-3M-a4j"/>
@@ -239,7 +207,6 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="エリア:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bc5-9O-1I0">
                                 <rect key="frame" x="8" y="61" width="56" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="K1G-qK-ke2"/>
                                     <constraint firstAttribute="width" constant="56" id="mi6-cb-sR3"/>
@@ -250,7 +217,6 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(0,0)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ycq-L3-066">
                                 <rect key="frame" x="67" y="32" width="59" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="59" id="Ylg-PO-fG3"/>
                                     <constraint firstAttribute="height" constant="21" id="egl-Ld-s6o"/>
@@ -261,7 +227,6 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(0,0)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="uUA-5E-BOz">
                                 <rect key="frame" x="69" y="61" width="59" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="C0t-cT-5bc"/>
                                     <constraint firstAttribute="width" constant="59" id="yBw-5R-Bgb"/>
@@ -271,8 +236,7 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5I-AX-e3x">
-                                <rect key="frame" x="180" y="20" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="460" y="20" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="ehW-Qv-cDy"/>
                                     <constraint firstAttribute="height" constant="120" id="pLL-v0-scH"/>
@@ -290,11 +254,29 @@
                                     <action selector="mortorButtonTouchUpInside:" destination="Mst-0T-9yp" eventType="touchUpInside" id="s9H-1B-KjD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ballon_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="60J-gp-zH5">
+                                <rect key="frame" x="0.0" y="20" width="158" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="T39-pf-vjT"/>
+                                    <constraint firstAttribute="width" constant="158" id="nmh-J3-c2Y"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="音量を最大にしてください。" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="107" translatesAutoresizingMaskIntoConstraints="NO" id="FAU-U4-KZx">
+                                <rect key="frame" x="41" y="47" width="107" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Yqy-LD-afb"/>
+                                    <constraint firstAttribute="width" constant="107" id="u5b-h5-3ER"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qcl-d2-CsY" firstAttribute="leading" secondItem="BaY-Vr-1x3" secondAttribute="leading" constant="8" id="0OK-Rg-guv"/>
                             <constraint firstItem="60J-gp-zH5" firstAttribute="top" secondItem="FAU-U4-KZx" secondAttribute="top" constant="-27" id="7rp-gQ-IYP"/>
+                            <constraint firstItem="Z9d-2N-Ffh" firstAttribute="top" secondItem="GR8-iT-aGn" secondAttribute="bottom" id="Cy8-gj-BoR"/>
                             <constraint firstItem="qcl-d2-CsY" firstAttribute="leading" secondItem="Ycq-L3-066" secondAttribute="leading" constant="-59" id="DID-GN-Ey8"/>
                             <constraint firstItem="uUA-5E-BOz" firstAttribute="top" secondItem="bc5-9O-1I0" secondAttribute="top" id="H23-OC-IeY"/>
                             <constraint firstItem="60J-gp-zH5" firstAttribute="leading" secondItem="BaY-Vr-1x3" secondAttribute="leading" id="H8a-bX-mba"/>
@@ -308,10 +290,17 @@
                             <constraint firstItem="qcl-d2-CsY" firstAttribute="top" secondItem="fbE-d2-0Iw" secondAttribute="bottom" constant="12" id="mQE-DV-R3G"/>
                             <constraint firstItem="qcl-d2-CsY" firstAttribute="top" secondItem="Ycq-L3-066" secondAttribute="top" id="nsn-sW-j08"/>
                             <constraint firstItem="GR8-iT-aGn" firstAttribute="leading" secondItem="BaY-Vr-1x3" secondAttribute="leading" id="ome-PK-z8x"/>
+                            <constraint firstItem="GR8-iT-aGn" firstAttribute="top" secondItem="fbE-d2-0Iw" secondAttribute="bottom" id="vdb-RW-GdL"/>
                             <constraint firstItem="GR8-iT-aGn" firstAttribute="top" secondItem="fbE-d2-0Iw" secondAttribute="bottom" id="w9o-he-lih"/>
                             <constraint firstItem="60J-gp-zH5" firstAttribute="top" secondItem="fbE-d2-0Iw" secondAttribute="bottom" id="z64-uA-e8j"/>
                             <constraint firstAttribute="trailing" secondItem="GR8-iT-aGn" secondAttribute="trailing" id="zUC-9R-B3R"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="w9o-he-lih"/>
+                                <exclude reference="WuH-J6-DPQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Face det." image="facedet_icon.png" id="8QM-yD-Ci5"/>
                     <connections>
@@ -325,9 +314,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ah-Wh-QbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805" y="1611"/>
+            <point key="canvasLocation" x="1509" y="1701"/>
         </scene>
-        <!--DoubleLED View Controller - 2LED-->
+        <!--2LED-->
         <scene sceneID="sfm-P9-3os">
             <objects>
                 <viewController id="Gsc-nZ-NvH" customClass="DoubleLEDViewController" sceneMemberID="viewController">
@@ -336,12 +325,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xfn-bC-FRf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Tzb-QI-tI8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxe-xg-W2H">
-                                <rect key="frame" x="100" y="73" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="240" y="73" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="W7v-AA-u9E"/>
                                     <constraint firstAttribute="height" constant="120" id="fYy-WP-p1H"/>
@@ -360,8 +348,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OFF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="jgo-Pe-KwD">
-                                <rect key="frame" x="100" y="179" width="120" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="240" y="179" width="120" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="lsG-mI-wz2"/>
                                     <constraint firstAttribute="width" constant="120" id="udy-al-A90"/>
@@ -371,8 +358,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zpI-CP-P9r">
-                                <rect key="frame" x="38" y="365" width="245" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="178" y="365" width="245" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="241" id="3fn-63-tXe"/>
                                     <constraint firstAttribute="height" constant="33" id="PHy-eu-2p9"/>
@@ -382,8 +368,7 @@
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aMs-73-QkI">
-                                <rect key="frame" x="33" y="270" width="254" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="173" y="270" width="254" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Ydz-nM-5BY"/>
                                     <constraint firstAttribute="width" constant="250" id="g1w-Yy-gYc"/>
@@ -394,7 +379,6 @@
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="LED1 輝度:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-en-HuH">
                                 <rect key="frame" x="28" y="241" width="116" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="116" id="xdh-dI-KA5"/>
                                     <constraint firstAttribute="height" constant="21" id="yWj-wd-jNW"/>
@@ -405,7 +389,6 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="LED2 輝度:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8iq-6g-KNx">
                                 <rect key="frame" x="28" y="336" width="132" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="U2k-l2-NGQ"/>
                                     <constraint firstAttribute="width" constant="132" id="zMI-WY-unF"/>
@@ -416,7 +399,6 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="l0Z-HX-cPZ">
                                 <rect key="frame" x="174" y="336" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2TD-Yv-26a"/>
                                     <constraint firstAttribute="width" constant="95" id="n5J-9k-5ll"/>
@@ -427,7 +409,6 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ballon_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="BO9-ty-f6L">
                                 <rect key="frame" x="0.0" y="20" width="158" height="120"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="NJ4-oG-IyJ"/>
                                     <constraint firstAttribute="height" constant="120" id="rnc-ZQ-90I"/>
@@ -435,7 +416,6 @@
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="音量を最大にしてください。" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="107" translatesAutoresizingMaskIntoConstraints="NO" id="mWp-yi-bZj">
                                 <rect key="frame" x="41" y="47" width="107" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="4R2-S8-f0n"/>
                                     <constraint firstAttribute="width" constant="107" id="cRO-Vt-9b4"/>
@@ -446,7 +426,6 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nhp-Ad-Ibu">
                                 <rect key="frame" x="174" y="241" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="FLv-nS-es5"/>
                                     <constraint firstAttribute="height" constant="21" id="FSm-1W-fUZ"/>
@@ -495,9 +474,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OiR-mh-Hct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805" y="180"/>
+            <point key="canvasLocation" x="1509.375" y="190.14084507042253"/>
         </scene>
-        <!--View Controller - LED-->
+        <!--LED-->
         <scene sceneID="23A-S3-bld">
             <objects>
                 <viewController id="Z6d-VD-H76" customClass="LEDViewController" sceneMemberID="viewController">
@@ -506,12 +485,11 @@
                         <viewControllerLayoutGuide type="bottom" id="eWC-Ek-qOt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hMm-eb-yfQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcd-cY-ZIy">
-                                <rect key="frame" x="100" y="80" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="240" y="80" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="3l6-ZL-dNN"/>
                                     <constraint firstAttribute="height" constant="120" id="Tdb-So-QS4"/>
@@ -531,7 +509,6 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ballon_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ci5-dV-NVC">
                                 <rect key="frame" x="0.0" y="20" width="158" height="120"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="FRT-QW-O0m"/>
                                     <constraint firstAttribute="height" constant="120" id="SPd-45-KWI"/>
@@ -539,7 +516,6 @@
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="音量を最大にしてください。" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="107" translatesAutoresizingMaskIntoConstraints="NO" id="ayv-bu-rL5">
                                 <rect key="frame" x="42" y="47" width="107" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="9dj-1u-QSB"/>
                                     <constraint firstAttribute="width" constant="107" id="x69-dg-Md7"/>
@@ -549,8 +525,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OFF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="BvT-i0-ESc">
-                                <rect key="frame" x="100" y="191" width="120" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="240" y="191" width="120" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="bRH-rn-blL"/>
                                     <constraint firstAttribute="height" constant="39" id="qZX-6T-cY0"/>
@@ -560,8 +535,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwL-ZB-Y0s">
-                                <rect key="frame" x="40" y="265" width="240" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="180" y="265" width="240" height="113"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <constraints>
@@ -599,9 +573,9 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suH-kP-mdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="-1204"/>
+            <point key="canvasLocation" x="1500" y="-1271.8309859154929"/>
         </scene>
-        <!--Brightness View Controller - Brightness-->
+        <!--Brightness-->
         <scene sceneID="UOL-KX-ayC">
             <objects>
                 <viewController id="Us8-cc-0Jn" customClass="BrightnessViewController" sceneMemberID="viewController">
@@ -610,12 +584,11 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                         <viewControllerLayoutGuide type="bottom" id="pWr-aK-CgS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Pvs-D8-oIs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI0-lP-EN1">
-                                <rect key="frame" x="100" y="74" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="240" y="74" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="QrN-pN-Bu4"/>
                                     <constraint firstAttribute="height" constant="120" id="jOf-0o-N1F"/>
@@ -634,10 +607,9 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OFF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="T3M-Ej-TEh">
-                                <rect key="frame" x="100" y="180" width="120" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="240" y="180" width="120" height="39"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="3Bk-q6-mMB"/>
@@ -648,8 +620,7 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3Lx-kR-HFa">
-                                <rect key="frame" x="38" y="367" width="245" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="178" y="367" width="245" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="JzJ-Wt-jn9"/>
                                     <constraint firstAttribute="width" constant="241" id="Ldy-u9-oOf"/>
@@ -659,8 +630,7 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="tFk-rU-gsv">
-                                <rect key="frame" x="33" y="286" width="254" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="173" y="286" width="254" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="NPY-LH-0oZ"/>
                                     <constraint firstAttribute="width" constant="250" id="ijq-u3-GtZ"/>
@@ -671,9 +641,8 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="振幅制御:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jMA-xF-BNI">
                                 <rect key="frame" x="28" y="257" width="116" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="F5O-39-Jlv"/>
@@ -685,9 +654,8 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="デューティ比制御:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dfn-YL-yRk">
                                 <rect key="frame" x="28" y="338" width="132" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="M2u-ry-Cnx"/>
@@ -699,9 +667,8 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7z9-wf-uLm">
                                 <rect key="frame" x="174" y="338" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="rH6-Un-ZJH"/>
@@ -713,7 +680,6 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ballon_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="p87-3f-0yb">
                                 <rect key="frame" x="0.0" y="20" width="158" height="120"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="Lho-ml-BOZ"/>
                                     <constraint firstAttribute="width" constant="158" id="uyH-Qb-WaS"/>
@@ -721,7 +687,6 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="音量を最大にしてください。" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="107" translatesAutoresizingMaskIntoConstraints="NO" id="iK6-E3-Hty">
                                 <rect key="frame" x="42" y="47" width="107" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="107" id="Xbb-3x-Krs"/>
                                     <constraint firstAttribute="height" constant="66" id="naW-8A-ei6"/>
@@ -732,9 +697,8 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="71J-Pa-swR">
                                 <rect key="frame" x="174" y="257" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Rzm-Pf-UBF"/>
@@ -783,7 +747,7 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGF-Xw-sVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="-478"/>
+            <point key="canvasLocation" x="1500" y="-504.92957746478868"/>
         </scene>
     </scenes>
     <resources>
@@ -798,9 +762,4 @@ LEDが光らないときは、ホーム画面の”設定”アイコンから�
         <image name="mortor_button.png" width="120" height="120"/>
         <image name="mortor_button_highlighted.png" width="120" height="120"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

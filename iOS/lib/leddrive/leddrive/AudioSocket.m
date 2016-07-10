@@ -75,7 +75,7 @@ static void sessionPropertyChanged(void *inClientData,
 
 #pragma mark - AudioBufferDelegate
 //-(void)demodulate:(UInt32)length buf:(AudioUnitSampleType *)buf {}
--(void)modulate:(UInt32)length leftBuf:(AudioUnitSampleType *)leftBuf rightBuf:(AudioUnitSampleType *)rightBuf {}
+-(void)modulate:(UInt32)length leftBuf:(Float32 *)leftBuf rightBuf:(Float32 *)rightBuf {}
 
 #pragma mark - render callback
 static OSStatus renderCallback(void * inRefCon,
@@ -90,8 +90,8 @@ static OSStatus renderCallback(void * inRefCon,
 		return kAudioUnitErr_CannotDoInCurrentContext;
 	}
     
-	AudioUnitSampleType *outL = ioData->mBuffers[0].mData;
-	AudioUnitSampleType *outR = ioData->mBuffers[1].mData;
+	Float32 *outL = ioData->mBuffers[0].mData;
+	Float32 *outR = ioData->mBuffers[1].mData;
 	
 	// modulate
 	[phy modulate:inNumberFrames leftBuf:outL rightBuf:outR];
@@ -113,7 +113,7 @@ static OSStatus renderCallback(void * inRefCon,
             [self updateIsAudioSessionInterrupted:NO];
             break;
         default:
-            @throw [NSString stringWithFormat:@"Unexpected interruptionType:%d, func:%s", interruptionType, __PRETTY_FUNCTION__];
+            @throw [NSString stringWithFormat:@"Unexpected interruptionType:%ld, func:%s", interruptionType, __PRETTY_FUNCTION__];
             break;
     }
 }
@@ -276,12 +276,12 @@ static OSStatus renderCallback(void * inRefCon,
 	{
 		audioFormat.mSampleRate         = kAudioSamplingRate;
 		audioFormat.mFormatID           = kAudioFormatLinearPCM;
-		audioFormat.mFormatFlags        = kAudioFormatFlagsAudioUnitCanonical;
+		audioFormat.mFormatFlags        = kAudioFormatFlagIsFloat | kAudioFormatFlagsNativeEndian | kAudioFormatFlagIsPacked |  kAudioFormatFlagIsNonInterleaved;
 		audioFormat.mChannelsPerFrame   = 2;
-		audioFormat.mBytesPerPacket     = sizeof(AudioUnitSampleType);
-		audioFormat.mBytesPerFrame      = sizeof(AudioUnitSampleType);
+		audioFormat.mBytesPerPacket     = sizeof(Float32);
+		audioFormat.mBytesPerFrame      = sizeof(Float32);
 		audioFormat.mFramesPerPacket    = 1;
-		audioFormat.mBitsPerChannel     = 8 * sizeof(AudioUnitSampleType);
+		audioFormat.mBitsPerChannel     = 8 * sizeof(Float32);
 		audioFormat.mReserved           = 0;
 	}    
     error = AudioUnitSetProperty(_audioUnit,

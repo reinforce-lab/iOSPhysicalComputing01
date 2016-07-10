@@ -190,12 +190,9 @@
     for(CIFaceFeature *feature in _features) {
         // 座標変換
         // 顔検出は、640x480 (ホームボタンを右に見て、第1象限。画面縦方向に640)
-        // 画面表示領域は、320x411 (UIKitの座標系)
-        // なので画面両端に 6px 隙間がある
-        // 縮尺率は、0.624
-        const float scale = 0.642;
+        float scale = _preview.frame.size.width / 480.0;
         const CGRect r = feature.bounds;
-        CGRect rect = CGRectMake((480 - r.origin.x - r.size.width)  * scale + 6,
+        CGRect rect = CGRectMake((480 - r.origin.x - r.size.width)  * scale,
                                  (680 - r.origin.y - r.size.height) * scale,
                                  r.size.height *scale,
                                  r.size.width  *scale);
