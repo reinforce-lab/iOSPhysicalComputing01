@@ -30,13 +30,6 @@
 	// Do any additional setup after loading the view.
     [self loadHelpPage];
 }
--(NSUInteger)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
-}
-
--(BOOL)shouldAutorotate{
-    return YES;
-}
 
 #pragma mark - Private pages
 -(void)loadHelpPage

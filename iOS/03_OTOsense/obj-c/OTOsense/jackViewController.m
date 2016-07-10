@@ -92,11 +92,16 @@
 }
 -(void)showWarningDialog
 {
-    UIAlertView *alert = [[UIAlertView alloc]     
-                          initWithTitle:@"警告" 
-                          message:@"LED制御実験は適切な知識と指導の元で行なってください。\n特に光過敏性発作等の危険性への配慮が必要です。"
-                          delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];    
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:@"警告"
+                                message:@"LED制御実験は適切な知識と指導の元で行なってください。\n特に光過敏性発作等の危険性への配慮が必要です。"
+                                preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:nil];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 -(void)updateJackVCViews
 {

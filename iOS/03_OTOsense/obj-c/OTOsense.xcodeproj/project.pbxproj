@@ -14,6 +14,7 @@
 		F814AAB7158B67B500C356EF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F814AAB6158B67B500C356EF /* MobileCoreServices.framework */; };
 		F814AAB9158B67BE00C356EF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F814AAB8158B67BE00C356EF /* QuartzCore.framework */; };
 		F814AABB158B67C600C356EF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F814AABA158B67C600C356EF /* CoreMotion.framework */; };
+		F846BD521D325A2100B7B106 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F846BD511D325A2100B7B106 /* Default-568h@2x.png */; };
 		F848E9E116401063001ECE5E /* libOTOplug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F848E9DC16401031001ECE5E /* libOTOplug.a */; };
 		F84C88D9158C6D7D00510302 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84C88D8158C6D7D00510302 /* CoreLocation.framework */; };
 		F84C88DB158C6D8C00510302 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84C88DA158C6D8C00510302 /* CoreImage.framework */; };
@@ -108,6 +109,7 @@
 		F814AAB6158B67B500C356EF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F814AAB8158B67BE00C356EF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F814AABA158B67C600C356EF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		F846BD511D325A2100B7B106 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F848E9D316401031001ECE5E /* OTOplug.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OTOplug.xcodeproj; path = OTOplug/OTOplug.xcodeproj; sourceTree = "<group>"; };
 		F84C88D8158C6D7D00510302 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F84C88DA158C6D8C00510302 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -246,6 +248,7 @@
 		F8BE8116158480DB0097CF63 = {
 			isa = PBXGroup;
 			children = (
+				F846BD511D325A2100B7B106 /* Default-568h@2x.png */,
 				F8BE8137158480DB0097CF63 /* MainStoryboard.storyboard */,
 				F85166881877EA00001766C7 /* Images.xcassets */,
 				F848E9D316401031001ECE5E /* OTOplug.xcodeproj */,
@@ -506,6 +509,7 @@
 				F8544FD31589E3C8001828F4 /* accs_icon.png in Resources */,
 				F8544FD41589E3C8001828F4 /* accs_icon@2x.png in Resources */,
 				F8544FE11589E3DD001828F4 /* compass_highlighted_icon.png in Resources */,
+				F846BD521D325A2100B7B106 /* Default-568h@2x.png in Resources */,
 				F8544FE21589E3DD001828F4 /* compass_highlighted_icon@2x.png in Resources */,
 				F8544FE31589E3DD001828F4 /* compass_icon.png in Resources */,
 				F8544FE41589E3DD001828F4 /* compass_icon@2x.png in Resources */,
@@ -579,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -606,6 +611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -626,11 +632,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "OTOsense/OTOsense-Prefix.pch";
 				INFOPLIST_FILE = "OTOsense/OTOsense-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wa-fu-u.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -643,11 +648,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "OTOsense/OTOsense-Prefix.pch";
 				INFOPLIST_FILE = "OTOsense/OTOsense-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wa-fu-u.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

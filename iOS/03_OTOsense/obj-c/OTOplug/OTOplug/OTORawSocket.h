@@ -59,6 +59,6 @@
  */
 -(void)flush;
 
-// Protected methods
+
 -(void)onReceivePacket;
 @end

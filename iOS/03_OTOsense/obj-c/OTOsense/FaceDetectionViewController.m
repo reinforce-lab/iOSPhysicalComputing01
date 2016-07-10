@@ -24,16 +24,16 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.faceDetector = [[FaceDetector alloc] initWithView:self.preview];
-    self.faceDetector.delegate = self;
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-
-
     [super viewWillAppear:animated];
+    
+    if( self.faceDetector == nil) {
+        self.faceDetector = [[FaceDetector alloc] initWithView:self.preview];
+        self.faceDetector.delegate = self;
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -42,12 +42,17 @@
     
     [self.faceDetector start];
     
-    if(! self.faceDetector.isCameraAvailable) {
-        UIAlertView *alert = [[UIAlertView alloc]     
-                              initWithTitle:@"警告" 
-                              message:@"フロントカメラが有効ではありません。"
-                              delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
+    if(! self.faceDetector.isCameraAvailable) {        
+        UIAlertController *alert = [UIAlertController
+                                    alertControllerWithTitle:@"警告"
+                                    message:@"フロントカメラが有効ではありません。"
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction
+                                   actionWithTitle:@"OK"
+                                   style:UIAlertActionStyleDefault
+                                   handler:nil];
+        [alert addAction:okAction];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 -(void)viewWillDisappear:(BOOL)animated

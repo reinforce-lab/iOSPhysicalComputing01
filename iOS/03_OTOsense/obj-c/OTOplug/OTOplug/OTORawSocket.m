@@ -12,6 +12,11 @@
 #import "AudioPHY.h"
 #include "math.h"
 
+@interface OTORawSocket()
+
+-(void)onSendBufferEmpty;
+@end
+
 @implementation OTORawSocket
 @synthesize delegate = delegate_;
 @synthesize audioPHY;
@@ -29,9 +34,9 @@
         rcvBuf_ = calloc(maxPacketSize_, sizeof(uint8_t));
         rcvSize_ = 0;
         
-        float samplingRate = [_modem getAudioSamplingRate];
+        float samplingRate  = [_modem getAudioSamplingRate];
         int audioBufferSize = [_modem getAudioBufferSize];
-        self.audioPHY = [[AudioPHY alloc] initWithParameters:samplingRate audioBufferSize:audioBufferSize];
+        self.audioPHY = [[AudioPHY alloc] initWithSamplingRate:samplingRate audioBufferSize:audioBufferSize];
         self.audioPHY.delegate = self;
         self.audioPHY.modem    = _modem;
 
