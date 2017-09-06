@@ -24,6 +24,9 @@ enum PWMByteReceiverState { Start = 0, BitReceiving, StuffingBit };
 	int rcvBufLength_;
 	Float32 signalLevel_;
 
+    int kPWMPulseWidthThreashold_;
+    int kPWMLostCarrierDuration_;
+    
     __unsafe_unretained id<SWMModem> modem_;
 }
 
@@ -36,13 +39,21 @@ enum PWMByteReceiverState { Start = 0, BitReceiving, StuffingBit };
 @synthesize signalLevel = signalLevel_;
 
 #pragma mark Constructor
--(id)initWithModem:(id<SWMModem>)m
+-(id)initWithModem:(id<SWMModem>)m mark1Samples:(int)mark1Samples
 {
     self= [super init];
 	if(self) {
 		sliceLevel_ = kPWMSliceLevel;
-		modem_ = m;
-		rcvBuf_   = malloc(kPWMMaxPacketSize);
+		modem_      = m;
+		rcvBuf_     = malloc(kPWMMaxPacketSize);
+        
+        //#define kPWMMark0Samples   (kPWMMark1Samples *2)
+        //#define kPWMBaudRate       (kSWMSamplingRate / kPWMMark1Samples)
+        //#define kPWMLostCarrierDuration   (kPWMMark0Samples * 1.5)
+        //#define kPWMPulseWidthThreashold  (kPWMMark1Samples * 1.5)
+        const int kPWMMark0Samples = mark1Samples * 2;
+        kPWMPulseWidthThreashold_  = mark1Samples     * 1.5; // 0/1パルス判定のしきい値は、mark1(短い)の1.5倍幅。
+        kPWMLostCarrierDuration_   = kPWMMark0Samples * 1.5; // キャリアロストのしきい値は、mark0(長い)の1.5倍幅。
 	}
 	return self;
 }
@@ -129,11 +140,11 @@ enum PWMByteReceiverState { Start = 0, BitReceiving, StuffingBit };
 	for(int i=0; i < length;i++) {
 		// Low-pass filter
  		Float32 sig = buf[i];
-		lpfSig_ += (sig - lpfSig_) / 512 ; // LPF time constant 44.1kHz/512 =86Hz
+		lpfSig_ += (sig - lpfSig_) / 512.0 ; // LPF time constant 44.1kHz/512 =86Hz
 		Float32 diff = sig - lpfSig_;
 
 		// Signal level
-		sigLevel += (fabsf(diff) - sigLevel) / (4*1024); // LPF time constant 44.1kHz/(4*1024) = 11Hz
+		sigLevel += (fabsf(diff) - sigLevel) / (4.0 * 1024.0 ); // LPF time constant 44.1kHz/(4*1024) = 11Hz
 		
 		// edge detection
 		BOOL edgeDetection = false;
@@ -149,10 +160,10 @@ enum PWMByteReceiverState { Start = 0, BitReceiving, StuffingBit };
 			} 
 		}
 
-//NSLog(@"AMP:%f", diff);
+//NSLog(@"AMP:%f SIG:%f", diff, sigLevel);
 		// bit decoding
 		if(edgeDetection) {
-			BOOL isNarrowPulse = (clockPhase_ <= (kPWMPulseWidthThreashold /2));
+			BOOL isNarrowPulse = (clockPhase_ <= (kPWMPulseWidthThreashold_ /2));
 			
 			lostCarrier_ = FALSE;
 			clockPhase_ = 0;
@@ -179,12 +190,22 @@ enum PWMByteReceiverState { Start = 0, BitReceiving, StuffingBit };
 		clockPhase_++;
 		
 		// lost carrier?
-		if(clockPhase_ == kPWMLostCarrierDuration) {
+		if(clockPhase_ == kPWMLostCarrierDuration_) {
 			lostCarrier_ = TRUE;
 			[self lostCarrier];
 		}
 	}
 	self.signalLevel = sigLevel;
+
+// デバッグ
+/*
+    static int cnt =0;
+    cnt++;
+    if(cnt > 50) {
+        NSLog(@"signalLevel: %e", self.signalLevel);
+        cnt = 0;
+    }
+*/
 }
 
 @end

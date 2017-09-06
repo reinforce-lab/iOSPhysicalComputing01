@@ -17,7 +17,8 @@
 @property (nonatomic, assign, readonly) BOOL isBufferEmtpy;
 @property (nonatomic, assign) BOOL mute;
 
--(id)initWithModem:(id<SWMModem>)modem;
+//  mark1Samplesは、mark1(短いビットマーク)のパルス幅を、そのオーディオサンプリングでのサンプリング数で定義する。
+-(id)initWithModem:(id<SWMModem>)modem mark1Samples:(int)mark1Samples;
 -(int)sendPacket:(Byte[])buf length:(int)length;
 // Modem instance calls this method from audio rendering thread.
 -(void)modulate:(UInt32)length leftBuf:(Float32 *)leftBuf rightBuf:(Float32 *)rightBuf;

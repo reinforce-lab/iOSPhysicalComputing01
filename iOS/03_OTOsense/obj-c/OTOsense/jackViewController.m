@@ -21,7 +21,7 @@
 #pragma mark - Properties
 @synthesize socket;
 
-@synthesize ballonImageView;
+@synthesize balloonImageView;
 @synthesize ballonTextLabel;
 
 #pragma mark - Lifecycle
@@ -36,7 +36,7 @@
 
 - (void)viewDidUnload
 {
-    [self setBallonImageView:nil];
+    [self setBalloonImageView:nil];
     [self setBallonTextLabel:nil];
     [super viewDidUnload];
 }
@@ -105,10 +105,14 @@
 }
 -(void)updateJackVCViews
 {
-    [UIView animateWithDuration:0.5 animations:^{
-        [self updateJackVCViewsIntrinsic];
-    }];
+    // 音量制御などのイベントからUI更新処理が呼ばれる。音周りのDelegateは、mainとは別の音処理のスレッドで走っている。ここでmainスレッドに処理を移す。
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.5 animations:^{
+            [self updateJackVCViewsIntrinsic];
+        }];
+    });
 }
+
 -(void)updateJackVCViewsIntrinsic
 {
     bool isReady = YES;
@@ -119,18 +123,18 @@
     if(! phy.isHeadsetIn ) { // イヤホンが刺されていない 
         isReady = NO;
 
-        ballonImageView.image = [UIImage imageNamed:@"ballon_up.png"];    
+        balloonImageView.image = [UIImage imageNamed:@"ballon_up.png"];    
         ballonTextLabel.text = @"イヤホンを挿してください。";
     } else if(phy.outputVolume < 1.0) { // 音量設定不足
         isReady = NO;
         
-        ballonImageView.image = [UIImage imageNamed:@"ballon_left.png"];
+        balloonImageView.image = [UIImage imageNamed:@"ballon_left.png"];
         ballonTextLabel.text = @"音量を最大にしてください。";        
 //NSLog(@"%1.2f", phy.outputVolume);
     }
 
     // バルーンの表示/非表示
-    ballonImageView.hidden = isReady;
+    balloonImageView.hidden = isReady;
     ballonTextLabel.hidden = isReady;
     
     [self notifyIsSocketReady:isReady];

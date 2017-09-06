@@ -15,6 +15,7 @@
 // Average signal amplitude in an unit of Float32.
 @property Float32 signalLevel;
 
--(id)initWithModem:(id<SWMModem>)mdoem;
+//  mark1Samplesは、mark1(短いビットマーク)のパルス幅を、そのオーディオサンプリングでのサンプリング数で定義する。
+-(id)initWithModem:(id<SWMModem>)mdoem mark1Samples:(int)mark1Samples;
 -(void)demodulate:(UInt32)length buf:(Float32 *)buf;
 @end

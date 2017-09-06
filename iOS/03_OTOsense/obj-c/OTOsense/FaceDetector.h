@@ -14,7 +14,7 @@
 -(void)detectionUpdated:(NSArray *)features;
 @end
 
-@interface FaceDetector : NSObject<AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface FaceDetector : NSObject<AVCaptureVideoDataOutputSampleBufferDelegate, CALayerDelegate>
 
 @property (assign, nonatomic, readonly) BOOL isCameraAvailable;
 @property (weak, nonatomic)  id<FaceDetectorDelegate> delegate;

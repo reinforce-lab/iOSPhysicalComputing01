@@ -22,6 +22,8 @@
 	BOOL mute_;
 	BOOL isBufferEmpty_;
     __unsafe_unretained id<SWMModem> modem_;
+    
+    int kPWMMark0Samples_;
 }
 
 -(Float32 *)allocAndInitSineWaveform:(int)length;
@@ -37,7 +39,7 @@
 @synthesize mute = mute_;
 
 #pragma mark Constuctor
--(id)initWithModem:(id<SWMModem>)m
+-(id)initWithModem:(id<SWMModem>)m mark1Samples:(int)mark1Samples;
 {
     self = [super init];
 	if(self) {
@@ -48,10 +50,12 @@
 		buf_ = calloc(kPWMModulatorBufferLength, sizeof(Float32));
 		
 		// template waveform, '1' , '0', preamble (0xA5)
-		mark0Length_ = kPWMMark0Samples;
+        mark0Length_ = mark1Samples * 2;
 		mark0_ = [self allocAndInitSineWaveform:mark0Length_];
-		mark1Length_ = kPWMMark1Samples;
-		mark1_ = [self allocAndInitSineWaveform:mark1Length_];		
+		mark1Length_ = mark1Samples;
+		mark1_ = [self allocAndInitSineWaveform:mark1Length_];
+        
+        kPWMMark0Samples_ = mark1Samples * 2;
 	}
 	return self;
 }
@@ -122,7 +126,7 @@
 	@synchronized(self)
 	{		
 		// check available buffer length
-		int requiredBufferLength = (length + kNumberOfReSyncCode + 1) * 8 * kPWMMark0Samples; // 3: preamble 1: postamble
+		int requiredBufferLength = (length + kNumberOfReSyncCode + 1) * 8 * kPWMMark0Samples_; // 3: preamble 1: postamble
 		if( (kPWMModulatorBufferLength - bufWriteIndex_) < requiredBufferLength) {
 			return 0;
 		}

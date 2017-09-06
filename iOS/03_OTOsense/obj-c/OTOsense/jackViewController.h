@@ -14,7 +14,7 @@
 
 @property (weak, nonatomic) OTOPacketSocket *socket;
 
-@property (weak, nonatomic) IBOutlet UIImageView *ballonImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *balloonImageView;
 @property (weak, nonatomic) IBOutlet UILabel *ballonTextLabel;
 
 -(void)notifyIsSocketReady:(BOOL)isReady;

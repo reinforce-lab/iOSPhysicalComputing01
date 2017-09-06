@@ -18,7 +18,8 @@
 {
     id<SWMSocket>   socket_;
 	PWMModulator   *modulator_;
-	PWMDemodulator *demodulator_;
+	PWMDemodulator *demodulator1200_;
+    PWMDemodulator *demodulator2400_;
 }
 @end
 
@@ -29,8 +30,9 @@
 {
     self = [super init];
 	if(self) {
-		modulator_   = [[PWMModulator alloc] initWithModem:self];
-		demodulator_ = [[PWMDemodulator alloc] initWithModem:self];
+		modulator_   = [[PWMModulator alloc] initWithModem:self mark1Samples:kPWMMark1Samples1200];
+		demodulator1200_ = [[PWMDemodulator alloc] initWithModem:self mark1Samples:kPWMMark1Samples1200];
+        demodulator2400_ = [[PWMDemodulator alloc] initWithModem:self mark1Samples:kPWMMark1Samples2400];
 	}
    return self;
 }
@@ -57,7 +59,8 @@
 
 -(void)demodulate:(UInt32)length buf:(Float32 *)buf
 {
-    [demodulator_ demodulate:length buf:buf];
+    [demodulator1200_ demodulate:length buf:buf];
+    [demodulator2400_ demodulate:length buf:buf];
 }
 -(void)modulate:(UInt32)length leftBuf:(Float32 *)leftBuf rightBuf:(Float32 *)rightBuf
 {
